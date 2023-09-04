@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="GqMquYP1xUyUFWA3Ilia4g" Reference="hz4LrFmUMEiEUgYjo26OTg/vM4_EqiT4ke5yiknaWxI6g" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" ContentHash="de1Gu5C17Em95qDxMkH_Yg" CvType="Icon" DesignTimeRectangle="1076, 589, 32, 33" DesignTimeScaleFactor="1" FriendlyName="'grouping'" FullSelectorArgument="&lt;ctrl name='show more media controls' role='menu button' /&gt;&lt;ctrl role='grouping' /&gt;" FuzzySelectorArgument="&lt;ctrl name='show more media controls' role='menu button' /&gt;&lt;ctrl role='grouping' automationid='' /&gt;" Guid="3e32851d-5c10-4d7d-bca2-b9ae10745ee0" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACQAAAAlCAYAAAAqXEs9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABnSURBVFhH7dKxCoAgFEbh+7D26lFj5G7oLB2kBpEzfHAHhwP+cd25zMQgYhAxiBhEDCLrBe3HWVLamnr33oz4HFRDIqKpd+/NiPWCpvuyvzlq4qiJoyaOmjhqYhAxiBhEDCIGvcvlAfFmsBYb9lClAAAAAElFTkSuQmCC" Reference="hz4LrFmUMEiEUgYjo26OTg/vM4_EqiT4ke5yiknaWxI6g" ScopeSelectorArgument="[string.Format(&quot;&lt;wnd app='{0}' title='*' /&gt;&quot;, BrowserAppName)]" SearchSteps="Selector" SelectionStrategy="AA" Version="V2" Visibility="Interactive" WaitForReadyArgument="Complete">
+      <imageRef attrName="InformativeScreenshot" originalValue="17ed7c17d8e2c1e1087ee42be4e32c71.png" xmlns="">17ed7c17d8e2c1e1087ee42be4e32c71.png</imageRef>
+    </TargetAnchorable>
+    <scg:List x:TypeArguments="ObjectRepositoryVariableData" x:Key="Variables" Capacity="1">
+      <ObjectRepositoryVariableData IsVariable="False" Name="BrowserAppName" />
+    </scg:List>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

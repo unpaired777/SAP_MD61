@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="n8CiThgpyUKEzTNXILMewA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://my305028.s4hana.ondemand.com/ui#SalesOrder-manageSalesOrderV2?preferredMode=create&amp;sap-app-origin-hint=&amp;/SalesOrderManage('182192')?sap-iapp-state=ASNDOFBE7FZZ3DD0DKZP3VB67KYYS34B91V6EOGB" DesignTimeRectangle="297, 88, 10, 35" DesignTimeScaleFactor="1" FriendlyName="'SAP.UI.CORE.ICON __icon0'" FullSelectorArgument="&lt;webctrl ui5-tooltip='Navigation menu' class='*TitleMenuIcon' /&gt;" FuzzySelectorArgument="&lt;webctrl ui5-tooltip='Navigation menu' tag='SPAN' /&gt;" Guid="2bfb6fd1-61cc-4f5b-89c1-38b263da878c" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAA4AAAAnCAYAAAA/63kvAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAB7SURBVEhL7dDRCYAgEIDhNmkBV3AeJ3CS2sMeWsM9JGiGq+uE1M4Losf74R5UPlAH+JhCIYVCCoV+gGkFZyy4sOeNui14GI2HJdH6hnE+D+w1LSZEZ1OkvfqqDOYQ9nxjgcspEcZ/ToNbhPEQy5hDWB++pFBIoZDCbgAHqnpFGBTTQKMAAAAASUVORK5CYII=" ScopeSelectorArgument="[string.Format(&quot;&lt;html app='{0}' title='*' /&gt;&quot;, BrowserAppName)]" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" WaitForReadyArgument="Complete">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="1">
+          <Target DesignTimeRectangle="186, 83, 136, 44" ElementType="Text" FriendlyName="'Sales Order'" FullSelectorArgument="&lt;webctrl ui5p-text='Sales Order' ui5-type='Button' /&gt;" FuzzySelectorArgument="&lt;webctrl ui5p-text='Sales Order' ui5-type='Button' tag='H1' type='' class='sapUshellHeadTitle sapUshellAppTitleClickable' aaname='' check:text='Sales Order' /&gt;" SearchSteps="Selector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="a8a5644b4025e3b79266b243b1ea638d.png" xmlns="">072-7_On15UKw7SLdZWCaBw</imageRef>
+    </TargetAnchorable>
+    <scg:List x:TypeArguments="ObjectRepositoryVariableData" x:Key="Variables" Capacity="1">
+      <ObjectRepositoryVariableData Name="BrowserAppName" />
+    </scg:List>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

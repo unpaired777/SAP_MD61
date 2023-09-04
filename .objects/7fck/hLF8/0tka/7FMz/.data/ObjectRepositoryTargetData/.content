@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="4eCEQub1Vk-FR-8UBTqfbQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://my305028.s4hana.ondemand.com/ui#SalesOrder-manageSalesOrderV2?preferredMode=create&amp;sap-app-origin-hint=&amp;/SalesOrderManage('')?i-action=create&amp;sap-iapp-state=ASXPPFZB34NRCF98G7BCJMVGTE12D8A9J9XUQ462" DesignTimeRectangle="1705, 620, 76, 32" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Add Row'" FullSelectorArgument="&lt;webctrl innertext='Add Row' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl innertext='Add Row' tag='BUTTON' type='' class='sapMBtnBase sapMBtn sapMBarChild' aaname='Add Row' check:text='Add Row' /&gt;" Guid="7df36531-01ba-4caa-9855-bb9d870eae62" ScopeSelectorArgument="[string.Format(&quot;&lt;html app='{0}' title='*' /&gt;&quot;, BrowserAppName)]" SearchSteps="Selector" Version="V2" Visibility="Interactive" WaitForReadyArgument="Complete">
+      <imageRef attrName="InformativeScreenshot" originalValue="e0a8c658c18693c7eccfeeb42d926f36.png" xmlns="">e0a8c658c18693c7eccfeeb42d926f36.png</imageRef>
+    </TargetAnchorable>
+    <scg:List x:TypeArguments="ObjectRepositoryVariableData" x:Key="Variables" Capacity="1">
+      <ObjectRepositoryVariableData Name="BrowserAppName" />
+    </scg:List>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

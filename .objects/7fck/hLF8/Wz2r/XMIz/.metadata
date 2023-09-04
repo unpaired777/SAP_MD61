@@ -1,0 +1,14 @@
+﻿{
+  "Id": "XMIzMb0yG02LdUaskZV97Q",
+  "Reference": "hz4LrFmUMEiEUgYjo26OTg/XMIzMb0yG02LdUaskZV97Q",
+  "ParentRef": "hz4LrFmUMEiEUgYjo26OTg/Wz2r8Pg0K0qfJTtrVbhjXQ",
+  "Name": "You have been logged off",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Created": "2023-04-25T06:39:32.4238316Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=23.4.1.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=23.4.1.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2023-04-25T06:39:32.4238316Z"
+}

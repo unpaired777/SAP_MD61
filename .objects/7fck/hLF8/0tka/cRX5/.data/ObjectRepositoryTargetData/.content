@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="tF-f0C8ln0uZ7DLx5oLiTQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://my305028.s4hana.ondemand.com/ui?sap-language=EN&amp;help-mixedLanguages=false#Action-search&amp;/top=10&amp;filter=%7B%22dataSource%22%3A%7B%22type%22%3A%22Category%22%2C%22id%22%3A%22All%22%2C%22label%22%3A%22All%22%2C%22labelPlural%22%3A%22All%22%7D%2C%22searchTerm%22%3A%22Create%20Sales%20Orders%22%2C%22rootCondition%22%3A%7B%22type%22%3A%22Complex%22%2C%22operator%22%3A%22And%22%2C%22conditions%22%3A%5B%5D%7D%7D" DesignTimeRectangle="814, 225, 132, 24" DesignTimeScaleFactor="1" FriendlyName="'Create Sales Orders'" FullSelectorArgument="[string.Format(&quot;&lt;webctrl innertext='{0}' tag='SPAN' /&gt;&quot;, str_CreateSalesOrder)]" FuzzySelectorArgument="&lt;webctrl innertext='Create Sales Orders' tag='SPAN' type='' class='sapMText sapUiSelectable sapMTextNoWrap sapMTextMaxWidth suggestText suggestNavItem suggestListItemCell' aaname='' check:text='Create Sales Orders' /&gt;" Guid="2e78444b-d299-4761-944b-988543ed8078" ImageBase64="" ScopeSelectorArgument="[string.Format(&quot;&lt;html app='{0}' title='*' /&gt;&quot;, BrowserAppName)]" SearchSteps="Selector" Version="V2" Visibility="Interactive" WaitForReadyArgument="Complete">
+      <imageRef attrName="InformativeScreenshot" originalValue="102704e0ecb9841561a7e87dd0d9cfcd.png" xmlns="">102704e0ecb9841561a7e87dd0d9cfcd.png</imageRef>
+    </TargetAnchorable>
+    <scg:List x:TypeArguments="ObjectRepositoryVariableData" x:Key="Variables" Capacity="2">
+      <ObjectRepositoryVariableData Name="BrowserAppName" />
+      <ObjectRepositoryVariableData Name="str_CreateSalesOrder" />
+    </scg:List>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

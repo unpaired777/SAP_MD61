@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="48AkXxGcbE-4DjjCZ8aG0w" Reference="hz4LrFmUMEiEUgYjo26OTg/3AbeOzydBESTGS_BqVi8Cw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://accounts.sap.com/saml2/idp/sso" ContentHash="aamvyoCzYUq5BNfZvhxiUw" DesignTimeRectangle="1076, 263, 120, 37" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Continue'" FullSelectorArgument="&lt;webctrl tag='BUTTON' aaname='Continue' /&gt;" FuzzySelectorArgument="&lt;webctrl id='logOnFormSubmit' tag='BUTTON' type='submit' class='ids-button fn-button ids-button--primary fn-button--emphasized ids-button--login js-button-login' check:innerText='Continue' /&gt;" Guid="86ead187-a468-404a-8cc2-78cd9da1017e" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHwAAAApCAYAAAD3XU36AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJuSURBVHhe7ZyxTsMwEIZ5HyRmXoOHYipi4Ql4ADZWxNoRlAExdEEwlqEdylDJ9EL+y9W+hrSQpPHdJ/2LGzuJv7OTJT0JjilcuDES4fcvn+Hi9jWcXT+H06snzwhD7sghuYzZEn758B7Obwp1EM/4Qi7JqYSFUzW47PxCTuVKZ+G0BWgdPOMPuQUs3J/Z+YbcAhauHejJJ8CFGwlw4UYCXLiRABduJMCFGwkYWPhHmH5VF8Cswp167H9lHmbyHI/LsCjPuw7TR3lcXgHDCeeJ1pkVSp+/hs/pwtWDugutsor5XG/vYqVrwo0EDCJ88rb+OenXMkzi34vV5odUyN38pwtYvH2I3+tCmRXRYwIFVY4bQb8lK7zFWJvo9yD7ok0cW9HJ7vVLwCDCIW9b2q5oz/kKFiB3hpTyPAcI18A1txUeFypod+//FzCA8Fpgm5uuV4d4xrIkTKyQxAJEoaBN29KbhDeM1Up44/n6fayAIxe++1heOeUqT1cWJZGyp/CmsdoIr4tVQxRwDwFHvqXXwuXkU3gyRys8vacuA47vpa0UgMnPZIVr99lzwCDC5cTUL15ReyWFJ01ugSwJUvYVro11oHBRPHVb1Te5zk345VEUXQ8BAwnfRHtrFtSTLYsggotlX+EV1H6g8GSsCPT1t/StiLdfRq/8eOK2J6ylJNlG/EU4JSraWaH3bb72fgIGFu7pK8CFGwlw4UYCXLiRABduJMCFGwlw4UYCXLiRABduJICF+7dl+Ub9tsy/Hs036tej/n14ntn5fTjh/wCRV8jlzn+AAFQNtAX4M328IXfkUK5skAh38saFmyKEb+p3I2jItKYwAAAAAElFTkSuQmCC" Reference="hz4LrFmUMEiEUgYjo26OTg/3AbeOzydBESTGS_BqVi8Cw" ScopeSelectorArgument="[string.Format(&quot;&lt;html app='{0}' title='*' /&gt;&quot;, BrowserAppName)]" SearchSteps="Selector" Version="V2" Visibility="Interactive" WaitForReadyArgument="[NWaitForReady.Complete]">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="0" />
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="106bc642792eda6e99bf99224df01204.png" xmlns="">106bc642792eda6e99bf99224df01204.png</imageRef>
+    </TargetAnchorable>
+    <scg:List x:TypeArguments="ObjectRepositoryVariableData" x:Key="Variables" Capacity="1">
+      <ObjectRepositoryVariableData IsVariable="False" Name="BrowserAppName" />
+    </scg:List>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

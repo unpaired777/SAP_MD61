@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="invMxHoyAUqJNTMp7HLREg" Reference="OVwlqfWTEEKHxUpO3LrkCQ/aVtZ7oeOCEaCBmJELJDmOw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://my305028.s4hana.ondemand.com/ui?sap-language=EN&amp;help-mixedLanguages=false#SalesOrder-manageSalesOrderV2?preferredMode=create&amp;sap-app-origin-hint=&amp;/SalesOrderManage('180738')?sap-iapp-state=AS4NCROBFK9GWPS7PT85AOVAGKQ1992L5G86B2GT" DesignTimeRectangle="704, 363, 57, 18" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Warning'" FullSelectorArgument="&lt;webctrl aaname='Warning' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Warning' tag='SPAN' type='' class='sapMText sapUiSelectable sapMTextBreakWord sapMTextMaxWidth sapMBarChild' check:text='Warning' /&gt;" Guid="91e00253-52dd-4f67-a7ba-fddf9f89b88e" ScopeSelectorArgument="[string.Format(&quot;&lt;html app='{0}' title='*' /&gt;&quot;, BrowserAppName)]" SearchSteps="Selector" Version="V2" Visibility="Interactive" WaitForReadyArgument="Complete">
+      <imageRef attrName="InformativeScreenshot" originalValue="a85be4271b13d40abd012ba121123e13.png" xmlns="">a85be4271b13d40abd012ba121123e13.png</imageRef>
+    </TargetAnchorable>
+    <scg:List x:TypeArguments="ObjectRepositoryVariableData" x:Key="Variables" Capacity="1">
+      <ObjectRepositoryVariableData Name="BrowserAppName" />
+    </scg:List>
+    <x:String x:Key="ActivityType">CheckState</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

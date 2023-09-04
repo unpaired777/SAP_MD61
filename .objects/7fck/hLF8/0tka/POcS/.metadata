@@ -1,0 +1,14 @@
+﻿{
+  "Id": "POcSE9gORUqQ96RQVTa7TQ",
+  "Reference": "hz4LrFmUMEiEUgYjo26OTg/POcSE9gORUqQ96RQVTa7TQ",
+  "ParentRef": "hz4LrFmUMEiEUgYjo26OTg/0tkah7Xzfky_pDTpdxiRqQ",
+  "Name": "Sold to Party Product",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Created": "2023-04-18T04:29:37.7245581Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=23.4.1.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=23.4.1.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2023-04-18T04:29:37.7245581Z"
+}

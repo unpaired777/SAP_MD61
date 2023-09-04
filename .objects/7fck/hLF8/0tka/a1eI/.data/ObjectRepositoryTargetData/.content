@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="RmUYF566t0OhifLivHQ97g" Reference="hz4LrFmUMEiEUgYjo26OTg/pMNR8nflU0KX-9ErtA1P9Q" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://my305028.s4hana.ondemand.com/ui?sap-language=EN&amp;help-mixedLanguages=false#ProductTrialOffer-displayTrialCenter&amp;/s4hana_us/tours" DesignTimeRectangle="696, 106, 64, 26" DesignTimeScaleFactor="1" FriendlyName="'VF Of All'" FullSelectorArgument="&lt;webctrl tag='SPAN' innertext='All' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='SPAN' innertext='All' type='' class='sapMSltLabel' aaname='' check:text='All' /&gt;" Guid="3f4edcee-1987-4820-b59f-a0f709f79456" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEQAAAAeCAYAAACVBrgjAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGqSURBVGhDY/gPBF+/f////uOnUQzEDJ+/fMUqMVIxAzbBkYxHAwQNjwYIGh4NEDQ8GiBoeDRA0PBogKBhsgKktm3Cf1ldu/9T5ixBET9+5gJYHMaPSisCq0VWM9gxWQFiaO//PyA2679fVAaK+IgMkF0Hjv7XtfH5//DJM7Dnr926C5cbkQGSWljzv6C6FcwGpZC2/hlwuREXIK/evPuvZuoGTiUg/swFK/47+MXA5WkdICDzkM1HxyA5kBpscsRikgJk9aYd4OwC44Oyjby+AzggQHxaB4iFWyjYfGyBAhMHqUGXIwWTFCCwGELHJXWdYHl6ZBlsgQLjUxoYIEx0gMBSw8oN2/5fvXkHjnumzgXXOiA19CpDkAOFmoEBwkQHCKjNgZxdYBhW2+w7cgIeINv3HgKXN6AACUvK/3/v4WMMfZRi5EChVmCAMNEB4hqUAK9d0DGotoHJOfjGgB25Zdf+/8vXbgGnKo/QZAw91MCggKBmYIAwSWXISMCjAYKGRwMEDY8GCBoeDRA0PBogaHg0QNDwaICg4dEAQcOjU5loeHSyGwV/+g8ABkuv3Do9lSMAAAAASUVORK5CYII=" ScopeSelectorArgument="[string.Format(&quot;&lt;html app='{0}' title='*' /&gt;&quot;, BrowserAppName)]" SearchSteps="Selector" Version="V2" Visibility="Interactive" WaitForReadyArgument="Complete">
+      <imageRef attrName="InformativeScreenshot" originalValue="ce183341e205c147561f0300ba2e4be9.png" xmlns="">ce183341e205c147561f0300ba2e4be9.png</imageRef>
+    </TargetAnchorable>
+    <scg:List x:TypeArguments="ObjectRepositoryVariableData" x:Key="Variables" Capacity="1">
+      <ObjectRepositoryVariableData Name="BrowserAppName" />
+    </scg:List>
+    <x:String x:Key="ActivityType">CheckState</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

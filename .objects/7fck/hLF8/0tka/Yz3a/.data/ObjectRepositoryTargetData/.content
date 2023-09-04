@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="mRW7Q80yU0ipUk3wJQH03Q" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://my305028.s4hana.ondemand.com/ui?sap-language=EN&amp;help-mixedLanguages=false#SalesOrder-manageSalesOrderV2?preferredMode=create&amp;/SalesOrderManage(...)?i-action=create" DesignTimeRectangle="871, 727, 141, 32" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Create Sales Order'" FullSelectorArgument="&lt;webctrl innertext='Create Sales Order' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl innertext='Create Sales Order' tag='BUTTON' type='' class='sapMBtnBase sapMBtn sapMBtnInverted sapMDialogBeginButton sapMBarChild' aaname='Create Sales Order' check:text='Create Sales Order' /&gt;" Guid="2f2acd09-ddfc-43d3-9f13-97f86772efaa" ScopeSelectorArgument="[string.Format(&quot;&lt;html app='{0}' title='*' /&gt;&quot;, BrowserAppName)]" SearchSteps="Selector" Version="V2" Visibility="Interactive" WaitForReadyArgument="Complete">
+      <imageRef attrName="InformativeScreenshot" originalValue="3bc16a114d301fb052b48b59eb9bb664.png" xmlns="">3bc16a114d301fb052b48b59eb9bb664.png</imageRef>
+    </TargetAnchorable>
+    <scg:List x:TypeArguments="ObjectRepositoryVariableData" x:Key="Variables" Capacity="1">
+      <ObjectRepositoryVariableData Name="BrowserAppName" />
+    </scg:List>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="bhczf33KgU6Cs8XCTbtzqQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://my305028.s4hana.ondemand.com/ui#SalesOrder-manageSalesOrderV2?preferredMode=create&amp;sap-app-origin-hint=&amp;/SalesOrderManage('')?i-action=create&amp;sap-iapp-state=ASW6RI40KMVRT56KNHCFV7F2NJ0LIECYQ4VTGTYC" DesignTimeRectangle="172, 590, 271, 26" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT __field54-__clone…'" FullSelectorArgument="&lt;webctrl aria-role='presentation' class='sapUiTableCtrl' tag='TABLE' idx='1' /&gt;&lt;webctrl tag='INPUT' type='text' idx='1' value='' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='presentation' class='sapUiTableCtrl' tag='TABLE' /&gt;&lt;webctrl tag='INPUT' type='text' class='sapMInputBaseInner' value='' aaname='' /&gt;" Guid="dce3a145-9f3e-4f81-8f59-eadf9c38241d" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAARMAAAAeCAYAAAAPQPrSAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADgSURBVHhe7d2xqQJBGIVRSxMLsAxNbcHQLgyswR7swMDY7CGIIAb6y4IOCD6Q3RueAzcZNv6YaHZUAAFiAkR8xOR6e9Rme63p4lTj2Z+Z2c9rMelCIiJm1nctJt2NpDtYrS91Ot9fpwC/aTF530qEBOijxeR9VQHoQ0yACDEBIsQEiBATIEJMgAgxASLEBIgQEyBCTIAIMQEixASIEBMgQkyACDEBIsQEiBATIEJMgIgWE882AkO0mHhQGhiixcSvLsxsyFpMOvvDsebLXU1mx68fm5n9t4+YAPQlJkBA1RO2XzBk8fcV1QAAAABJRU5ErkJggg==" ScopeSelectorArgument="[string.Format(&quot;&lt;html app='{0}' title='*' /&gt;&quot;, BrowserAppName)]" SearchSteps="Selector" Version="V2" Visibility="Interactive" WaitForReadyArgument="Complete">
+      <imageRef attrName="InformativeScreenshot" originalValue="9c283854bdbdcd9a06df88ce4be48116.png" xmlns="">9c283854bdbdcd9a06df88ce4be48116.png</imageRef>
+    </TargetAnchorable>
+    <scg:List x:TypeArguments="ObjectRepositoryVariableData" x:Key="Variables" Capacity="1">
+      <ObjectRepositoryVariableData Name="BrowserAppName" />
+    </scg:List>
+    <x:String x:Key="ActivityType">TypeInto</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

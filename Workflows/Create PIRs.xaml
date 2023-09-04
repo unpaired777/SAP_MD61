@@ -1,0 +1,814 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Create_PIRs" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_SAPBrowser" Type="InArgument(ui:UiElement)" />
+    <x:Property Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
+    <x:Property Name="in_TransactionItem" Type="InArgument(sd:DataRow)" />
+    <x:Property Name="in_TransactionNumber" Type="InArgument(x:String)" />
+    <x:Property Name="out_RequirementSaved" Type="OutArgument(x:String)" />
+    <x:Property Name="in_TransactionData2" Type="InArgument(sd:DataTable)" />
+    <x:Property Name="out_MaterialQuantity" Type="OutArgument(x:Int32)" />
+  </x:Members>
+  <this:Create_PIRs.in_TransactionData2>
+    <InArgument x:TypeArguments="sd:DataTable" />
+  </this:Create_PIRs.in_TransactionData2>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1668,5853</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Create_PIRs_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:Annotation.AnnotationText="Creating PIRs Using MD61 TCode and adding Pre-Material Request for Different- Different Materials" DisplayName="Create PIRs" sap:VirtualizedContainerService.HintSize="1678,5788" sap2010:WorkflowViewState.IdRef="Sequence_3">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:Int32" Name="int_ColumnNum" />
+      <Variable x:TypeArguments="x:Int32" Name="int_PlantNum" />
+      <Variable x:TypeArguments="x:String" Name="BrowserAppName" />
+      <Variable x:TypeArguments="x:String" Name="str_TCode" />
+      <Variable x:TypeArguments="x:String" Name="str_CreatePIRs" />
+      <Variable x:TypeArguments="x:String" Name="str_Material" />
+      <Variable x:TypeArguments="x:String" Name="str_Requirement_Plan" />
+      <Variable x:TypeArguments="x:String" Name="str_MRPArea" />
+      <Variable x:TypeArguments="x:String" Name="str_Plant" />
+      <Variable x:TypeArguments="x:String" Name="str_Version" />
+      <Variable x:TypeArguments="x:String" Name="str_FromDate" />
+      <Variable x:TypeArguments="x:String" Name="str_ToDates" />
+      <Variable x:TypeArguments="x:String" Name="str_Month" />
+      <Variable x:TypeArguments="x:Int32" Name="int_DelayForCheckApp" />
+      <Variable x:TypeArguments="x:String" Name="str_DateforRequest" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:FilterDataTable DataTable="[in_TransactionData2]" DisplayName="Filter Data Table - getting item for particular parties" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="1616,161" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" OutputDataTable="[in_TransactionData2]" SelectColumnsMode="Remove">
+      <ui:FilterDataTable.Filters>
+        <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
+          <ui:FilterOperationArgument BooleanOperator="And" Operator="EQ">
+            <ui:FilterOperationArgument.Column>
+              <InArgument x:TypeArguments="x:String">[in_TransactionData2.Columns("Material").ToString]</InArgument>
+            </ui:FilterOperationArgument.Column>
+            <ui:FilterOperationArgument.Operand>
+              <InArgument x:TypeArguments="x:String">[in_TransactionItem("Material").ToString]</InArgument>
+            </ui:FilterOperationArgument.Operand>
+          </ui:FilterOperationArgument>
+        </scg:List>
+      </ui:FilterDataTable.Filters>
+      <ui:FilterDataTable.SelectColumns>
+        <scg:List x:TypeArguments="InArgument" Capacity="4">
+          <x:Null />
+        </scg:List>
+      </ui:FilterDataTable.SelectColumns>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:FilterDataTable>
+    <ui:MultipleAssign DisplayName="Assining all Variables" sap:VirtualizedContainerService.HintSize="1616,52" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+      <ui:MultipleAssign.AssignOperations>
+        <scg:List x:TypeArguments="ui:AssignOperation" Capacity="16">
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[BrowserAppName]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">[in_Config("BrowserAppName").ToString]</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[str_TCode]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">[in_Config("Tcode").ToString]</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[str_CreatePIRs]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">[in_Config("CreatePIRs").ToString]</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_4">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[str_Material]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">[in_TransactionItem("Material").ToString]</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_5">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[str_Requirement_Plan]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">[in_TransactionItem("Requirements Plan").ToString]</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_6">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[str_MRPArea]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">[in_TransactionItem("MRP Area").ToString]</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_7">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[str_Plant]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">[in_TransactionItem("Plant").ToString]</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_8">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[str_Version]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">[in_TransactionItem("Version").ToString]</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_9">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[str_FromDate]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">[in_TransactionItem("From Date").ToString]</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_10">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[str_ToDates]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">[in_TransactionItem("To Date").ToString]</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_11">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[str_Month]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">[in_TransactionItem("Planning Period").ToString]</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_12">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:Int32">[int_DelayForCheckApp]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:Int32">[CInt(in_Config("DelayforCheckApp").ToString)]</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+        </scg:List>
+      </ui:MultipleAssign.AssignOperations>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:MultipleAssign>
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Home Screen" sap:VirtualizedContainerService.HintSize="1616,5353" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InUiElement="[in_SAPBrowser]" InteractionMode="Simulate" OpenMode="Never" ScopeGuid="09bda359-7a31-45ef-99d6-5177da0e5b35" Version="V2" WindowResize="Maximize">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1582,5216" sap2010:WorkflowViewState.IdRef="Sequence_16">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:String" Name="str_GetMonth" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NCheckState DisplayName="Check App State 'Create Planned'" sap:VirtualizedContainerService.HintSize="1520,424" sap2010:WorkflowViewState.IdRef="NCheckState_9" ScopeIdentifier="09bda359-7a31-45ef-99d6-5177da0e5b35" Timeout="[int_DelayForCheckApp]" Version="V3">
+              <uix:NCheckState.IfExists>
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,207" sap2010:WorkflowViewState.IdRef="Sequence_24">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:LogMessage DisplayName="Log Message - Create Planned Independent Requirements: Initial Screen is open" sap:VirtualizedContainerService.HintSize="388,92" sap2010:WorkflowViewState.IdRef="LogMessage_12" Level="Info" Message="[&quot;Create Planned Independent Requirements: Initial Screen is Open&quot;]" />
+                </Sequence>
+              </uix:NCheckState.IfExists>
+              <uix:NCheckState.IfNotExists>
+                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,167" sap2010:WorkflowViewState.IdRef="Sequence_25">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NCheckState DisplayName="Check App State 'All'" sap:VirtualizedContainerService.HintSize="388,52" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="09bda359-7a31-45ef-99d6-5177da0e5b35" Timeout="10" Version="V3">
+                    <uix:NCheckState.IfExists>
+                      <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,530" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <uix:NTypeInto ActivateBefore="False" ClickBeforeMode="None" DelayAfter="2" DisplayName="Type into Search " EmptyFieldMode="None" sap:VirtualizedContainerService.HintSize="388,218" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="WindowMessages" ScopeIdentifier="09bda359-7a31-45ef-99d6-5177da0e5b35" Text="[str_TCode]" Version="V3">
+                          <uix:NTypeInto.Target>
+                            <uix:TargetAnchorable BrowserURL="https://my305028.s4hana.ondemand.com/ui#Shell-home" ContentHash="dEYxnjP880aRi6JRH0MyUg" CvTextArgument="Search" CvType="Text" DesignTimeRectangle="735, 92, 440, 26" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'Search'" FullSelectorArgument="&lt;webctrl tag='INPUT' name='search' placeholder='Search' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' name='search' placeholder='Search' /&gt;" Guid="7a2561e1-6498-44e4-b750-7dfb0bf96e97" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAbwAAAAeCAYAAABXE6uOAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAPNSURBVHhe7dtbT5RXGMXxfhPvm6aXpjFpvLFekKptTa3Y0hpFPFLEFq1oLA2eesCAkhqtRjH1VKwtREUjRtEiBQsGRDxQkKOcBhC+wFPW08wUh+GG0abp/l/8MpPZ+31n7lbWfp95ZXRs3AAA+L8j8AAAQSDwAABBIPAAAEEg8AAAQSDwAABBIPAAAEEg8AAAQSDwAABBIPAAAEFIOvAetLbZtvwCe2PeYpv12pv27odr7Fz5ZYuMjCbc/7K0PPrT0jO3+muidQBA2JIKvMbmh7Y4bZ39+FOZtXd2O73fvnOfdfX2JbzmZamorLLsrTutb2Ao4ToAIGxJBd6Bwydsz76DNvJsLOH6v0m/RRKtAQAw48AbHh2z/G+LvVV19jydds/lypu2ZHlm7Liz6nZdbP3+w9bYcejrc1I8PJ8ODPpatLHtLvje3ptokTqq7OjutYLiozY3JdVenT3fsnN3eavs6RuwDTl53i71me41b1GaVVX/810AgLAl1fCqa+st5f2VHjDrP//SLl29Yf2DEV9T6ztVWm5rN+2wew8e29DwiJWcPm+Zm7/yUHvS1Wu5E2F37WaNP++ra2iyBR+ssuq6Br9ebe2tdz62C1euW3dvn7W2d9qK9Vvs2Mlzfn1re4cHro5VFYaLlq22vL1F/kyxraPLw/LrwkPP/V4AQLiSHloZjIzYrZo/PHzU1BRwanzNE+1t+brN/hrde/3W75a6MsvDbvI9RE1t1ae5dvdeizc2BaiGX7Sm8Nx/qMS+Kz4y0RqfTblWbVDfq2CM7ldb/KHk7JS9AIAwJR14k9XcuevHjwqtM+cv+DFmvJwde61/KOJ7NNyi48nomqYsFVrxE5dPunrsk7U5sfYXL/75ne6xJnv7tPsBAOF5oYGnppeRtc0bno4TpztS1DHkRxmb7MZvtbG/L6iNfVN02NtZ/MSlwnHpiix/nXwfibbByqrbsc8amlq8XT5u63huLwAgXDMKvIbG+z4kUl5xLfZ3BL1fmJphv1666ntOlpZ5K9NgykBk2AOp8OBxf6/2pwam5qYjUT2n0/O6Xy7+fW18Y9O+ZekbPRT1d4emlkc+zFLf2DylDYruo2EY3Tv6GQAgbDMKPIWWhkfeXpLuR5F6drfxi3yrrW+M/UVBgyV6jqaBFq0rgBR+WtMQS9rqz/xaTW4eP/WzP79TM0vU2ETTndqrazT1WVpW4b8jvg3y/A4AkMgLPdIEAOC/isADAASBwAMABIHAAwAEgcADAASBwAMABIHAAwAEgcADAASBwAMABIHAAwAEYNz+AigduqrdSuQRAAAAAElFTkSuQmCC" InformativeScreenshot="e25d7f6a8df5693a3adcb0c6d910d52b.png" Reference="hz4LrFmUMEiEUgYjo26OTg/youWlb13ukWeAu-LH37Tmg" ScopeSelectorArgument="[string.Format(&quot;&lt;html app='{0}' title='*' /&gt;&quot;, BrowserAppName)]" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" WaitForReadyArgument="Complete">
+                              <uix:TargetAnchorable.Anchors>
+                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                  <uix:Target CvElementArea="660, 86, 559, 38" CvTextArea="674, 97, 18, 13" CvTextArgument="All" CvType="InputBox" DesignTimeRectangle="668, 89, 64, 32" ElementType="InputBox" FriendlyName="'Search'" FullSelectorArgument="&lt;webctrl innertext='AllAll' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl innertext='AllAll' tag='DIV' type='' class='sapMSlt sapMSltDefault sapMSltMinWidth sapMSltAutoAdjustedWidth sapMSltHoverable sapMSltWithArrow searchSelect' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEQAAAAeCAYAAACVBrgjAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHtSURBVGhD7ZlLSwJRFMf9Jn2BPkCbaFObVkEQFRRUglCJhrXIyF4YWEiFEFQQFLSI2tSmFkWURBb2IpCe9hotw0dPXJ7mXBhxji5G0hDmCD+Yuf87M94f5947MAaQfz/JJCQ+PhkZw9f3T9ZArxiyNeoZFkJgIQQWQmAhBBZCYCGEnIXcP0nQaLRCR/cASC8RVeaanIGllTVxfHoRAJO1T+4fUvUpdnIWsrm9B+02BxjNvXB4fK7KdCcklniHYZcHNrZ2YW5hGTyzi6pcd0ICV7dikNd3D6I6sFIepXAqL6QQvF9VTXPq/hRsxxz7Zcu1kpOQ1fVNUSFYKeHIG3TZneA98KfyQgrZ8fqgpLRcQKXguZJhv/QsVzQLiURj0Ds0LqaL0ja/tApjU7MQf/8Q54WeMtmk5FMGolmIUrLKwxXqWsxwE3wQff5jDUmXkk4+ZCCahWA19DsnIPj4LAaJXN4EobNnUOw82Oe/FlUqJV8yEE1C8H0D3zvSp4sC7jZO97RYV1DIqHwceo0IIfWtFtg/OoFoPJFx3V9RpORTBqJJCA6qoc0idhea4W7TZLKJDP9cRXUDOEYnQQq/gn3EDWWVteDzn2VcV6xonjJ6gYUQWAiBhRBYCIGFEFgIgYUQWAiBP2US+GO3ik/4BcQ1163xFgyCAAAAAElFTkSuQmCC" SearchSteps="Selector" />
+                                </scg:List>
+                              </uix:TargetAnchorable.Anchors>
+                            </uix:TargetAnchorable>
+                          </uix:NTypeInto.Target>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </uix:NTypeInto>
+                        <uix:NClick ActivateBefore="False" ClickType="Single" DelayBefore="1" DisplayName="Click 'Create PIRs'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="WindowMessages" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="09bda359-7a31-45ef-99d6-5177da0e5b35" Version="V3">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable BrowserURL="https://my304870.s4hana.ondemand.com/ui?sap-language=EN&amp;help-mixedLanguages=false#Shell-home" DesignTimeRectangle="816, 258, 73, 24" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Create PIRs'" FullSelectorArgument="[string.Format(&quot;&lt;webctrl colName='Apps' innertext='{0}' tag='SPAN' /&gt;&quot;, str_CreatePIRs)]" FuzzySelectorArgument="&lt;webctrl colName='Apps' innertext='Create PIRs' tag='SPAN' type='' class='sapMText sapUiSelectable sapMTextNoWrap sapMTextMaxWidth suggestText suggestNavItem suggestListItemCell' aaname='Create PIRs' check:text='Create PIRs' /&gt;" Guid="87755976-51d3-4fd6-9384-a05d99c3daf9" ImageBase64="" InformativeScreenshot="d4bf06523b8b27dfe168651baa9291d4.png" ScopeSelectorArgument="[string.Format(&quot;&lt;html app='{0}' title='*' /&gt;&quot;, BrowserAppName)]" SearchSteps="Selector" Version="V2" Visibility="Interactive" WaitForReadyArgument="Complete" />
+                          </uix:NClick.Target>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </uix:NClick>
+                      </Sequence>
+                    </uix:NCheckState.IfExists>
+                    <uix:NCheckState.IfNotExists>
+                      <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,207" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:LogMessage DisplayName="log search bar is not loaded" sap:VirtualizedContainerService.HintSize="388,92" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Search bar is not loaded &quot;]">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ui:LogMessage>
+                      </Sequence>
+                    </uix:NCheckState.IfNotExists>
+                    <uix:NCheckState.Target>
+                      <uix:TargetAnchorable BrowserURL="https://my305028.s4hana.ondemand.com/ui?sap-language=EN&amp;help-mixedLanguages=false#ProductTrialOffer-displayTrialCenter&amp;/s4hana_us/tours" ContentHash="RmUYF566t0OhifLivHQ97g" DesignTimeRectangle="696, 106, 64, 26" DesignTimeScaleFactor="1" FriendlyName="'VF of  All'" FullSelectorArgument="&lt;webctrl tag='SPAN' innertext='All' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='SPAN' innertext='All' type='' class='sapMSltLabel' aaname='' check:text='All' /&gt;" Guid="3f4edcee-1987-4820-b59f-a0f709f79456" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEQAAAAeCAYAAACVBrgjAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGqSURBVGhDY/gPBF+/f////uOnUQzEDJ+/fMUqMVIxAzbBkYxHAwQNjwYIGh4NEDQ8GiBoeDRA0PBogKBhsgKktm3Cf1ldu/9T5ixBET9+5gJYHMaPSisCq0VWM9gxWQFiaO//PyA2679fVAaK+IgMkF0Hjv7XtfH5//DJM7Dnr926C5cbkQGSWljzv6C6FcwGpZC2/hlwuREXIK/evPuvZuoGTiUg/swFK/47+MXA5WkdICDzkM1HxyA5kBpscsRikgJk9aYd4OwC44Oyjby+AzggQHxaB4iFWyjYfGyBAhMHqUGXIwWTFCCwGELHJXWdYHl6ZBlsgQLjUxoYIEx0gMBSw8oN2/5fvXkHjnumzgXXOiA19CpDkAOFmoEBwkQHCKjNgZxdYBhW2+w7cgIeINv3HgKXN6AACUvK/3/v4WMMfZRi5EChVmCAMNEB4hqUAK9d0DGotoHJOfjGgB25Zdf+/8vXbgGnKo/QZAw91MCggKBmYIAwSWXISMCjAYKGRwMEDY8GCBoeDRA0PBogaHg0QNDwaICg4dEAQcOjU5loeHSyGwV/+g8ABkuv3Do9lSMAAAAASUVORK5CYII=" InformativeScreenshot="ce183341e205c147561f0300ba2e4be9.png" Reference="hz4LrFmUMEiEUgYjo26OTg/a1eIIK1SXE61Du6nD6lnkg" ScopeSelectorArgument="[string.Format(&quot;&lt;html app='{0}' title='*' /&gt;&quot;, BrowserAppName)]" SearchSteps="Selector" Version="V2" Visibility="Interactive" WaitForReadyArgument="Complete" />
+                    </uix:NCheckState.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NCheckState>
+                </Sequence>
+              </uix:NCheckState.IfNotExists>
+              <uix:NCheckState.Target>
+                <uix:TargetAnchorable BrowserURL="https://my304870.s4hana.ondemand.com/ui#ForecastDemand-create?sap-ui-tech-hint=GUI" DesignTimeRectangle="186, 115, 483, 44" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Create Planned'" FullSelectorArgument="&lt;webctrl innertext='Create Planned Independent Requirements: Initial Screen' tag='H1' /&gt;" FuzzySelectorArgument="&lt;webctrl innertext='Create Planned Independent Requirements: Initial Screen' tag='H1' type='' class='sapUshellHeadTitle sapUshellAppTitleClickable' aaname='' check:text='Create Planned Independent Requirements: Initial Screen' /&gt;" Guid="a3f39f41-ffc3-4b76-9303-24318dc263d5" InformativeScreenshot="2047455f9f2042e859b84ae906ffb34a.png" ScopeSelectorArgument="[string.Format(&quot;&lt;html app='{0}' title='*' /&gt;&quot;, BrowserAppName)]" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NCheckState.Target>
+            </uix:NCheckState>
+            <uix:NCheckState DisplayName="Check App State Material" sap:VirtualizedContainerService.HintSize="1520,52" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="09bda359-7a31-45ef-99d6-5177da0e5b35" Timeout="10" Version="V3">
+              <uix:NCheckState.IfExists>
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,1562" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into Material" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,218" sap2010:WorkflowViewState.IdRef="NTypeInto_2" InteractionMode="Simulate" ScopeIdentifier="09bda359-7a31-45ef-99d6-5177da0e5b35" Text="[str_Material]" Version="V3">
+                    <uix:NTypeInto.Target>
+                      <uix:TargetAnchorable BrowserURL="https://my304870.s4hana.ondemand.com/sap(cz1TSUQlM2FBTk9OJTNhdmhzaHBzdXljaV9TVVlfMDAlM2F2WnlCa21xeWRGa2ZMU0w0UnpFNlpreWpzWjNpZVN6eTFyb25hUFczLUFUVA==)/bc/gui/sap/its/webgui/" DesignTimeRectangle="316, 375, 410, 26" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'UCF_SUGGESTBOX M0:46:::…'" FullSelectorArgument="&lt;webctrl sapweb-id='wnd[0]/usr/ctxtAM60X-MATNR' /&gt;" FuzzySelectorArgument="&lt;webctrl id='application-ForecastDemand-create-iframe' tag='IFRAME' /&gt;&lt;webctrl sapweb-id='wnd[0]/usr/ctxtAM60X-MATNR' tag='INPUT' type='text' class='lsField__input' aaname='Material' /&gt;" Guid="442f5ce6-55af-407d-84bb-35745a0f125d" ImageBase64="" InformativeScreenshot="15baa74144e984a8396acebc5e8c03c2.png" ScopeSelectorArgument="[string.Format(&quot;&lt;html app='{0}' title='*' /&gt;&quot;, BrowserAppName)]" SearchSteps="Selector" Version="V2" Visibility="Interactive" WaitForReadyArgument="Complete" />
+                    </uix:NTypeInto.Target>
+                  </uix:NTypeInto>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'MZ-FG-EB01T'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="WindowMessages" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="09bda359-7a31-45ef-99d6-5177da0e5b35" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://my304870.s4hana.ondemand.com/sap(cz1TSUQlM2FBTk9OJTNhdmhzaHBzdXljaV9TVVlfMDAlM2F2WnlCc191d2NyVDRKcmNBMHg1bHo2NHY5Y3ZpZVN4c243cXIzd1g2LUFUVA==)/bc/gui/sap/its/webgui/" DesignTimeRectangle="8, 163, 0, 0" DesignTimeScaleFactor="1" FriendlyName="'MZ-FG-EB01T'" FullSelectorArgument="[string.Format(&quot;&lt;webctrl innertext='{0}' tag='DIV' /&gt;&quot;, str_Material)]" FuzzySelectorArgument="[string.Format(&quot;&lt;webctrl id='application-ForecastDemand-create-iframe' tag='IFRAME' /&gt;&lt;webctrl sapweb-id='wnd[0]' /&gt;&lt;webctrl innertext='{0}' tag='DIV' type='' class='lsListbox__value' aaname='' check:text='{0}' /&gt;&quot;, str_Material)]" Guid="28dd7faa-2f77-4a4d-9eb8-2568509e28e7" ImageBase64="" ScopeSelectorArgument="[string.Format(&quot;&lt;html app='{0}' title='*' /&gt;&quot;, BrowserAppName)]" SearchSteps="Selector" Version="V2" Visibility="Interactive" WaitForReadyArgument="Complete" />
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into Requirements Plan" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,218" sap2010:WorkflowViewState.IdRef="NTypeInto_3" InteractionMode="Simulate" ScopeIdentifier="09bda359-7a31-45ef-99d6-5177da0e5b35" Text="[str_Requirement_Plan]" Version="V3">
+                    <uix:NTypeInto.Target>
+                      <uix:TargetAnchorable BrowserURL="https://my304870.s4hana.ondemand.com/sap(cz1TSUQlM2FBTk9OJTNhdmhzaHBzdXljaV9TVVlfMDAlM2F2WnlCa21xeWRGa2ZMU0w0UnpFNlpreWpzWjNpZVN6eTFyb25hUFczLUFUVA==)/bc/gui/sap/its/webgui/" DesignTimeRectangle="316, 407, 110, 26" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'UCF_SUGGESTBOX M0:46:::…'" FullSelectorArgument="&lt;webctrl sapweb-id='wnd[0]/usr/ctxtAM60X-PBDNR' /&gt;" FuzzySelectorArgument="&lt;webctrl id='application-ForecastDemand-create-iframe' tag='IFRAME' /&gt;&lt;webctrl sapweb-id='wnd[0]/usr/ctxtAM60X-PBDNR' tag='INPUT' type='text' class='lsField__input' aaname='Requirements Plan' /&gt;" Guid="bdb70d18-ecd6-400d-8f63-e3870ad795fc" ImageBase64="" InformativeScreenshot="b4a5abe02eaa63ac5e071f4a9cdcf066.png" ScopeSelectorArgument="[string.Format(&quot;&lt;html app='{0}' title='*' /&gt;&quot;, BrowserAppName)]" SearchSteps="Selector" Version="V2" Visibility="Interactive" WaitForReadyArgument="Complete" />
+                    </uix:NTypeInto.Target>
+                  </uix:NTypeInto>
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into MRP Area" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,218" sap2010:WorkflowViewState.IdRef="NTypeInto_4" InteractionMode="Simulate" ScopeIdentifier="09bda359-7a31-45ef-99d6-5177da0e5b35" Text="[str_MRPArea]" Version="V3">
+                    <uix:NTypeInto.Target>
+                      <uix:TargetAnchorable BrowserURL="https://my304870.s4hana.ondemand.com/sap(cz1TSUQlM2FBTk9OJTNhdmhzaHBzdXljaV9TVVlfMDAlM2F2WnlCa21xeWRGa2ZMU0w0UnpFNlpreWpzWjNpZVN6eTFyb25hUFczLUFUVA==)/bc/gui/sap/its/webgui/" DesignTimeRectangle="316, 439, 110, 26" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'UCF_SUGGESTBOX M0:46:::…'" FullSelectorArgument="&lt;webctrl sapweb-id='wnd[0]/usr/ctxtRM60X-BERID' /&gt;" FuzzySelectorArgument="&lt;webctrl id='application-ForecastDemand-create-iframe' tag='IFRAME' /&gt;&lt;webctrl sapweb-id='wnd[0]/usr/ctxtRM60X-BERID' tag='INPUT' type='text' class='lsField__input' aaname='MRP Area' /&gt;" Guid="cf33fc12-566a-4fb5-8bc9-05be198af511" ImageBase64="" InformativeScreenshot="9cca6ab8125ca9e2f30fff3eb4ef2fa2.png" ScopeSelectorArgument="[string.Format(&quot;&lt;html app='{0}' title='*' /&gt;&quot;, BrowserAppName)]" SearchSteps="Selector" Version="V2" Visibility="Interactive" WaitForReadyArgument="Complete" />
+                    </uix:NTypeInto.Target>
+                  </uix:NTypeInto>
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into Plant" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,218" sap2010:WorkflowViewState.IdRef="NTypeInto_5" InteractionMode="Simulate" ScopeIdentifier="09bda359-7a31-45ef-99d6-5177da0e5b35" Text="[str_Plant]" Version="V3">
+                    <uix:NTypeInto.Target>
+                      <uix:TargetAnchorable BrowserURL="https://my304870.s4hana.ondemand.com/sap(cz1TSUQlM2FBTk9OJTNhdmhzaHBzdXljaV9TVVlfMDAlM2F2WnlCa21xeWRGa2ZMU0w0UnpFNlpreWpzWjNpZVN6eTFyb25hUFczLUFUVA==)/bc/gui/sap/its/webgui/" DesignTimeRectangle="316, 471, 50, 26" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'1710'" FullSelectorArgument="&lt;webctrl sapweb-id='wnd[0]/usr/ctxtAM60X-WERKS' /&gt;" FuzzySelectorArgument="&lt;webctrl id='application-ForecastDemand-create-iframe' tag='IFRAME' /&gt;&lt;webctrl sapweb-id='wnd[0]/usr/ctxtAM60X-WERKS' tag='INPUT' type='text' class='lsField__input' aaname='Plant' /&gt;" Guid="3dae147c-3648-41ab-aec4-f604b0f9ba3b" ImageBase64="" InformativeScreenshot="97c2641c6612bc30e3e123b03dadcb90.png" ScopeSelectorArgument="[string.Format(&quot;&lt;html app='{0}' title='*' /&gt;&quot;, BrowserAppName)]" SearchSteps="Selector" Version="V2" Visibility="Interactive" WaitForReadyArgument="Complete" />
+                    </uix:NTypeInto.Target>
+                  </uix:NTypeInto>
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into Version" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,218" sap2010:WorkflowViewState.IdRef="NTypeInto_6" InteractionMode="Simulate" ScopeIdentifier="09bda359-7a31-45ef-99d6-5177da0e5b35" Text="[str_Version]" Version="V3">
+                    <uix:NTypeInto.Target>
+                      <uix:TargetAnchorable BrowserURL="https://my304870.s4hana.ondemand.com/sap(cz1TSUQlM2FBTk9OJTNhdmhzaHBzdXljaV9TVVlfMDAlM2F2WnlCa21xeWRGa2ZMU0w0UnpFNlpreWpzWjNpZVN6eTFyb25hUFczLUFUVA==)/bc/gui/sap/its/webgui/" DesignTimeRectangle="316, 567, 30, 26" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'00'" FullSelectorArgument="&lt;webctrl sapweb-id='wnd[0]/usr/ctxtRM60X-VERSB' /&gt;" FuzzySelectorArgument="&lt;webctrl id='application-ForecastDemand-create-iframe' tag='IFRAME' /&gt;&lt;webctrl sapweb-id='wnd[0]/usr/ctxtRM60X-VERSB' tag='INPUT' type='text' class='lsField__input' aaname='Version' /&gt;" Guid="2f87e61d-f26f-462a-8700-a1c65990af08" ImageBase64="" InformativeScreenshot="0b0e8c135bf8894373c63da1d0306a4c.png" ScopeSelectorArgument="[string.Format(&quot;&lt;html app='{0}' title='*' /&gt;&quot;, BrowserAppName)]" SearchSteps="Selector" Version="V2" Visibility="Interactive" WaitForReadyArgument="Complete" />
+                    </uix:NTypeInto.Target>
+                  </uix:NTypeInto>
+                </Sequence>
+              </uix:NCheckState.IfExists>
+              <uix:NCheckState.IfNotExists>
+                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,258" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:LogMessage DisplayName="Log Message - Create planned Independent Requirement page is not Laoded" sap:VirtualizedContainerService.HintSize="388,143" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Create planned Independent Requirement page is not Laoded&quot;]" />
+                </Sequence>
+              </uix:NCheckState.IfNotExists>
+              <uix:NCheckState.Target>
+                <uix:TargetAnchorable BrowserURL="https://my304870.s4hana.ondemand.com/ui#ForecastDemand-create?sap-ui-tech-hint=GUI" DesignTimeRectangle="186, 160, 483, 44" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Create Planned'" FullSelectorArgument="&lt;webctrl innertext='Create Planned Independent Requirements: Initial Screen' tag='H1' /&gt;" FuzzySelectorArgument="&lt;webctrl innertext='Create Planned Independent Requirements: Initial Screen' tag='H1' type='' class='sapUshellHeadTitle sapUshellAppTitleClickable' aaname='' check:text='Create Planned Independent Requirements: Initial Screen' /&gt;" Guid="0c1a18c9-7938-4d2a-907a-9f23199d4aa8" InformativeScreenshot="8a7a6a23bd7b79eb1907c940b94fe77b.png" ScopeSelectorArgument="[string.Format(&quot;&lt;html app='{0}' title='*' /&gt;&quot;, BrowserAppName)]" SearchSteps="Selector" Version="V2" Visibility="Interactive" WaitForReadyArgument="Complete" />
+              </uix:NCheckState.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NCheckState>
+            <uix:NCheckState DisplayName="Check App State Planning Horizon From Date " sap:VirtualizedContainerService.HintSize="1520,52" sap2010:WorkflowViewState.IdRef="NCheckState_3" ScopeIdentifier="09bda359-7a31-45ef-99d6-5177da0e5b35" Version="V3">
+              <uix:NCheckState.IfExists>
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,591" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into From Date" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,218" sap2010:WorkflowViewState.IdRef="NTypeInto_7" InteractionMode="Simulate" ScopeIdentifier="09bda359-7a31-45ef-99d6-5177da0e5b35" Text="[str_FromDate]" Version="V3">
+                    <uix:NTypeInto.Target>
+                      <uix:TargetAnchorable BrowserURL="https://my304870.s4hana.ondemand.com/sap(cz1TSUQlM2FBTk9OJTNhdmhzaHBzdXljaV9TVVlfMDAlM2F2WnlCa21xeWRGa2ZMU0w0UnpFNlpreWpzWjNpZVN6eTFyb25hUFczLUFUVA==)/bc/gui/sap/its/webgui/" DesignTimeRectangle="126, 663, 110, 26" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'07/24/2023'" FullSelectorArgument="&lt;webctrl sapweb-id='wnd[0]/usr/ctxtRM60X-DATVE' /&gt;" FuzzySelectorArgument="&lt;webctrl id='application-ForecastDemand-create-iframe' tag='IFRAME' /&gt;&lt;webctrl sapweb-id='wnd[0]/usr/ctxtRM60X-DATVE' tag='INPUT' type='text' class='lsField__input' aaname='From' /&gt;" Guid="15020d40-c601-4143-bf32-a52b136444a3" ImageBase64="" InformativeScreenshot="126076daef0392485b6fe417df1d9e77.png" ScopeSelectorArgument="[string.Format(&quot;&lt;html app='{0}' title='*' /&gt;&quot;, BrowserAppName)]" SearchSteps="Selector" Version="V2" Visibility="Interactive" WaitForReadyArgument="Complete" />
+                    </uix:NTypeInto.Target>
+                  </uix:NTypeInto>
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into ToDate" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,218" sap2010:WorkflowViewState.IdRef="NTypeInto_8" InteractionMode="Simulate" ScopeIdentifier="09bda359-7a31-45ef-99d6-5177da0e5b35" Text="[str_FromDate]" Version="V3">
+                    <uix:NTypeInto.Target>
+                      <uix:TargetAnchorable BrowserURL="https://my304870.s4hana.ondemand.com/sap(cz1TSUQlM2FBTk9OJTNhdmhzaHBzdXljaV9TVVlfMDAlM2F2WnlCa21xeWRGa2ZMU0w0UnpFNlpreWpzWjNpZVN6eTFyb25hUFczLUFUVA==)/bc/gui/sap/its/webgui/" DesignTimeRectangle="316, 663, 110, 26" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'08/27/2024'" FullSelectorArgument="&lt;webctrl sapweb-id='wnd[0]/usr/ctxtRM60X-DATBE' /&gt;" FuzzySelectorArgument="&lt;webctrl id='application-ForecastDemand-create-iframe' tag='IFRAME' /&gt;&lt;webctrl sapweb-id='wnd[0]/usr/ctxtRM60X-DATBE' tag='INPUT' type='text' class='lsField__input' aaname='To' /&gt;" Guid="c32a049c-d5ad-4dc7-91f7-8726590af384" ImageBase64="" InformativeScreenshot="d2e998d47c8193dda6113115904b42f1.png" ScopeSelectorArgument="[string.Format(&quot;&lt;html app='{0}' title='*' /&gt;&quot;, BrowserAppName)]" SearchSteps="Selector" Version="V2" Visibility="Interactive" WaitForReadyArgument="Complete" />
+                    </uix:NTypeInto.Target>
+                  </uix:NTypeInto>
+                </Sequence>
+              </uix:NCheckState.IfExists>
+              <uix:NCheckState.IfNotExists>
+                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,258" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:LogMessage DisplayName="Log Message - Planning Period Dates not Appeared" sap:VirtualizedContainerService.HintSize="388,143" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Planning Period Dates not Appeared&quot;]" />
+                </Sequence>
+              </uix:NCheckState.IfNotExists>
+              <uix:NCheckState.Target>
+                <uix:TargetAnchorable BrowserURL="https://my304870.s4hana.ondemand.com/sap(cz1TSUQlM2FBTk9OJTNhdmhzaHBzdXljaV9TVVlfMDAlM2F2WnlCa21xeWRGa2ZMU0w0UnpFNlpreWpzWjNpZVN6eTFyb25hUFczLUFUVA==)/bc/gui/sap/its/webgui/" DesignTimeRectangle="126, 663, 110, 26" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'07/24/2023'" FullSelectorArgument="&lt;webctrl sapweb-id='wnd[0]/usr/ctxtRM60X-DATVE' /&gt;" FuzzySelectorArgument="&lt;webctrl id='application-ForecastDemand-create-iframe' tag='IFRAME' /&gt;&lt;webctrl sapweb-id='wnd[0]/usr/ctxtRM60X-DATVE' tag='INPUT' type='text' class='lsField__input' aaname='From' /&gt;" Guid="0df77c9a-323b-4e49-901b-246026c9ca86" ImageBase64="" InformativeScreenshot="495dbc76141409df0cee04a705a3cfdb.png" ScopeSelectorArgument="[string.Format(&quot;&lt;html app='{0}' title='*' /&gt;&quot;, BrowserAppName)]" SearchSteps="Selector" Version="V2" Visibility="Interactive" WaitForReadyArgument="Complete" />
+              </uix:NCheckState.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NCheckState>
+            <uix:NCheckState DisplayName="Check App State Planning period" sap:VirtualizedContainerService.HintSize="1520,52" sap2010:WorkflowViewState.IdRef="NCheckState_4" ScopeIdentifier="09bda359-7a31-45ef-99d6-5177da0e5b35" Version="V3">
+              <uix:NCheckState.IfExists>
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,530" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into Month" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,218" sap2010:WorkflowViewState.IdRef="NTypeInto_9" InteractionMode="WindowMessages" ScopeIdentifier="09bda359-7a31-45ef-99d6-5177da0e5b35" Text="[str_Month]" Version="V3">
+                    <uix:NTypeInto.Target>
+                      <uix:TargetAnchorable BrowserURL="https://my304870.s4hana.ondemand.com/sap(cz1TSUQlM2FBTk9OJTNhdmhzaHBzdXljaV9TVVlfMDAlM2F2WnlCa21xeWRGa2ZMU0w0UnpFNlpreWpzWjNpZVN6eTFyb25hUFczLUFUVA==)/bc/gui/sap/its/webgui/" DesignTimeRectangle="626, 663, 20, 26" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'M'" FullSelectorArgument="&lt;webctrl sapweb-id='wnd[0]/usr/ctxtRM60X-ENTLU' /&gt;" FuzzySelectorArgument="&lt;webctrl id='application-ForecastDemand-create-iframe' tag='IFRAME' /&gt;&lt;webctrl sapweb-id='wnd[0]/usr/ctxtRM60X-ENTLU' tag='INPUT' type='text' class='lsField__input' aaname='Planning period' /&gt;" Guid="4bb2977f-d05a-4293-bce2-96968023a2fa" ImageBase64="" InformativeScreenshot="dc07ada4a6cd7f630c6e02626e0b028a.png" ScopeSelectorArgument="[string.Format(&quot;&lt;html app='{0}' title='*' /&gt;&quot;, BrowserAppName)]" SearchSteps="Selector" Version="V2" Visibility="Interactive" WaitForReadyArgument="Complete" />
+                    </uix:NTypeInto.Target>
+                  </uix:NTypeInto>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click Month" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_3" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="09bda359-7a31-45ef-99d6-5177da0e5b35" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://my304870.s4hana.ondemand.com/sap(cz1TSUQlM2FBTk9OJTNhdmhzaHBzdXljaV9TVVlfMDAlM2F2WnlCa21xeWRGa2ZMU0w0UnpFNlpreWpzWjNpZVN6eTFyb25hUFczLUFUVA==)/bc/gui/sap/its/webgui/" DesignTimeRectangle="8, 212, 0, 0" DesignTimeScaleFactor="1" FriendlyName="'M'" FullSelectorArgument="&lt;webctrl sapweb-id='wnd[0]' /&gt;&lt;webctrl sapweb-lsid='M0:46:::12:57_TALB-item-0' /&gt;" FuzzySelectorArgument="&lt;webctrl id='application-ForecastDemand-create-iframe' tag='IFRAME' /&gt;&lt;webctrl sapweb-id='wnd[0]' /&gt;&lt;webctrl sapweb-lsid='M0:46:::12:57_TALB-item-0' tag='DIV' type='' class='lsListbox__value' aaname='' check:innerText='M' /&gt;" Guid="ca5c6008-5ee3-486d-8d43-0688bbd10dea" ImageBase64="" ScopeSelectorArgument="[string.Format(&quot;&lt;html app='{0}' title='*' /&gt;&quot;, BrowserAppName)]" SearchSteps="Selector" Version="V2" Visibility="Interactive" WaitForReadyArgument="Complete" />
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                </Sequence>
+              </uix:NCheckState.IfExists>
+              <uix:NCheckState.IfNotExists>
+                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,258" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:LogMessage DisplayName="Log Message - Planning Period Month is not Appear" sap:VirtualizedContainerService.HintSize="388,143" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Planning Period Month is not Appear&quot;]" />
+                </Sequence>
+              </uix:NCheckState.IfNotExists>
+              <uix:NCheckState.Target>
+                <uix:TargetAnchorable BrowserURL="https://my304870.s4hana.ondemand.com/sap(cz1TSUQlM2FBTk9OJTNhdmhzaHBzdXljaV9TVVlfMDAlM2F2WnlCa21xeWRGa2ZMU0w0UnpFNlpreWpzWjNpZVN6eTFyb25hUFczLUFUVA==)/bc/gui/sap/its/webgui/" DesignTimeRectangle="626, 663, 20, 26" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'M'" FullSelectorArgument="&lt;webctrl sapweb-id='wnd[0]/usr/ctxtRM60X-ENTLU' /&gt;" FuzzySelectorArgument="&lt;webctrl id='application-ForecastDemand-create-iframe' tag='IFRAME' /&gt;&lt;webctrl sapweb-id='wnd[0]/usr/ctxtRM60X-ENTLU' tag='INPUT' type='text' class='lsField__input' aaname='Planning period' /&gt;" Guid="275aea6e-498e-4a30-a11f-bdea5413bafa" ImageBase64="" InformativeScreenshot="c556b7d2fc1c0929df3040a1d30e4898.png" ScopeSelectorArgument="[string.Format(&quot;&lt;html app='{0}' title='*' /&gt;&quot;, BrowserAppName)]" SearchSteps="Selector" Version="V2" Visibility="Interactive" WaitForReadyArgument="Complete" />
+              </uix:NCheckState.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NCheckState>
+            <uix:NCheckState DisplayName="Check App State 'Continue'" sap:VirtualizedContainerService.HintSize="1520,52" sap2010:WorkflowViewState.IdRef="NCheckState_5" ScopeIdentifier="09bda359-7a31-45ef-99d6-5177da0e5b35" Timeout="10" Version="V3">
+              <uix:NCheckState.IfExists>
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,272" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Continue'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_4" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="09bda359-7a31-45ef-99d6-5177da0e5b35" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://my304870.s4hana.ondemand.com/sap(cz1TSUQlM2FBTk9OJTNhdmhzaHBzdXljaV9TVVlfMDAlM2F2WnlCa21xeWRGa2ZMU0w0UnpFNlpreWpzWjNpZVN6eTFyb25hUFczLUFUVA==)/bc/gui/sap/its/webgui/" DesignTimeRectangle="1722, 1015, 66, 26" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Continue Emphasized'" FullSelectorArgument="&lt;webctrl sapweb-id='wnd[0]/tbar[0]/btn[0]' /&gt;" FuzzySelectorArgument="&lt;webctrl id='application-ForecastDemand-create-iframe' tag='IFRAME' /&gt;&lt;webctrl sapweb-id='wnd[0]/tbar[0]/btn[0]' tag='DIV' type='' class='lsButton lsButton--base urInlineMetricTop urNoUserSelect urBtnRadius  lsButton--useintoolbar  lsButton--active  lsButton--focusable  lsButton--up lsButton--design-emphasized' aaname='' check:innerText='Continue&amp;#xD;&amp;#xA; Emphasized' /&gt;" Guid="7fe6839f-0d58-4d5d-9d1e-d14d771fbde2" ImageBase64="" InformativeScreenshot="00208063f732092159b2c3a22a406ad8.png" ScopeSelectorArgument="[string.Format(&quot;&lt;html app='{0}' title='*' /&gt;&quot;, BrowserAppName)]" SearchSteps="Selector" Version="V2" Visibility="Interactive" WaitForReadyArgument="Complete" />
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                </Sequence>
+              </uix:NCheckState.IfExists>
+              <uix:NCheckState.IfNotExists>
+                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,207" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:LogMessage DisplayName="Log Message - Continue Button not found" sap:VirtualizedContainerService.HintSize="388,92" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Continue button is not found&quot;]" />
+                </Sequence>
+              </uix:NCheckState.IfNotExists>
+              <uix:NCheckState.Target>
+                <uix:TargetAnchorable BrowserURL="https://my304870.s4hana.ondemand.com/sap(cz1TSUQlM2FBTk9OJTNhdmhzaHBzdXljaV9TVVlfMDAlM2F2WnlCa21xeWRGa2ZMU0w0UnpFNlpreWpzWjNpZVN6eTFyb25hUFczLUFUVA==)/bc/gui/sap/its/webgui/" DesignTimeRectangle="1722, 1015, 66, 26" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Continue Emphasized'" FullSelectorArgument="&lt;webctrl sapweb-id='wnd[0]/tbar[0]/btn[0]' /&gt;" FuzzySelectorArgument="&lt;webctrl id='application-ForecastDemand-create-iframe' tag='IFRAME' /&gt;&lt;webctrl sapweb-id='wnd[0]/tbar[0]/btn[0]' tag='DIV' type='' class='lsButton lsButton--base urInlineMetricTop urNoUserSelect urBtnRadius  lsButton--useintoolbar  lsButton--active  lsButton--focusable  lsButton--up lsButton--design-emphasized' aaname='' check:innerText='Continue&amp;#xD;&amp;#xA; Emphasized' /&gt;" Guid="f5dea611-95a7-4bbb-950f-df65e5ad5e31" ImageBase64="" InformativeScreenshot="9d84278eb7d462583f6f4124dc96dd07.png" ScopeSelectorArgument="[string.Format(&quot;&lt;html app='{0}' title='*' /&gt;&quot;, BrowserAppName)]" SearchSteps="Selector" Version="V2" Visibility="Interactive" WaitForReadyArgument="Complete" />
+              </uix:NCheckState.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NCheckState>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Schedule Lines'" sap:VirtualizedContainerService.HintSize="1520,157" sap2010:WorkflowViewState.IdRef="NClick_6" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="09bda359-7a31-45ef-99d6-5177da0e5b35" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://my304870.s4hana.ondemand.com/sap/bc/gui/sap/its/webgui;~sysid=SUY;~service=3200?sap-iframe-hint=GUI#" DesignTimeRectangle="207, 336, 109, 32" DesignTimeScaleFactor="1" FriendlyName="'Schedule LinesSchedule'" FullSelectorArgument="&lt;webctrl tag='DIV' visibleinnertext='Schedule Lines' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='DIV' visibleinnertext='Schedule Lines' type='' class='lsTbsItem--scrollable lsTbsv5-LastItem' aaname='' check:text='Schedule LinesSchedule Lines' /&gt;" Guid="f46006f6-c63c-4d39-aaa8-9e423dd93511" InformativeScreenshot="6c75e2f9ef77f60fe50d982bc26ad500.png" ScopeSelectorArgument="[string.Format(&quot;&lt;html app='{0}' title='*' /&gt;&quot;, BrowserAppName)]" SearchSteps="Selector" Version="V2" Visibility="Interactive" WaitForReadyArgument="Complete" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NCheckState DisplayName="Check App State 'Schedule LinesSchedule'" sap:VirtualizedContainerService.HintSize="1520,2844" sap2010:WorkflowViewState.IdRef="NCheckState_8" ScopeIdentifier="09bda359-7a31-45ef-99d6-5177da0e5b35" Timeout="[int_DelayForCheckApp]" Version="V3">
+              <uix:NCheckState.IfExists>
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="752,2627" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[in_TransactionData2]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="690,2512" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+                    <ui:ForEachRow.Body>
+                      <ActivityAction x:TypeArguments="sd:DataRow">
+                        <ActivityAction.Argument>
+                          <DelegateInArgument x:TypeArguments="sd:DataRow" Name="Row" />
+                        </ActivityAction.Argument>
+                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="656,2395" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:MultipleAssign DisplayName="Assining Variables" sap:VirtualizedContainerService.HintSize="594,132" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
+                            <ui:MultipleAssign.AssignOperations>
+                              <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_15">
+                                  <ui:AssignOperation.To>
+                                    <OutArgument x:TypeArguments="x:Int32">[out_MaterialQuantity]</OutArgument>
+                                  </ui:AssignOperation.To>
+                                  <ui:AssignOperation.Value>
+                                    <InArgument x:TypeArguments="x:Int32">[CInt(Row("Quantity").ToString)]</InArgument>
+                                  </ui:AssignOperation.Value>
+                                </ui:AssignOperation>
+                                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_16">
+                                  <ui:AssignOperation.To>
+                                    <OutArgument x:TypeArguments="x:String">[str_DateforRequest]</OutArgument>
+                                  </ui:AssignOperation.To>
+                                  <ui:AssignOperation.Value>
+                                    <InArgument x:TypeArguments="x:String">[Row("Date").ToString]</InArgument>
+                                  </ui:AssignOperation.Value>
+                                </ui:AssignOperation>
+                              </scg:List>
+                            </ui:MultipleAssign.AssignOperations>
+                          </ui:MultipleAssign>
+                          <Sequence DisplayName="Line Item Requirement Month" sap:VirtualizedContainerService.HintSize="594,2108" sap2010:WorkflowViewState.IdRef="Sequence_22">
+                            <Sequence.Variables>
+                              <Variable x:TypeArguments="x:Int32" Name="int_RowNum" />
+                              <Variable x:TypeArguments="x:String" Name="str_GetRequirementDate" />
+                            </Sequence.Variables>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <Assign sap:VirtualizedContainerService.HintSize="532,82" sap2010:WorkflowViewState.IdRef="Assign_4">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="x:Int32">[int_ColumnNum]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="x:Int32">1</InArgument>
+                              </Assign.Value>
+                            </Assign>
+                            <Assign sap:VirtualizedContainerService.HintSize="532,82" sap2010:WorkflowViewState.IdRef="Assign_5">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="x:Int32">[int_RowNum]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="x:Int32">0</InArgument>
+                              </Assign.Value>
+                            </Assign>
+                            <uix:NGetAttributeGeneric x:TypeArguments="x:String" Attribute="aaname" DisplayName="Get Attribute Requirement Date" sap:VirtualizedContainerService.HintSize="532,207" sap2010:WorkflowViewState.IdRef="NGetAttributeGeneric`1_4" Result="[str_GetRequirementDate]" ScopeIdentifier="09bda359-7a31-45ef-99d6-5177da0e5b35" Version="V3">
+                              <uix:NGetAttributeGeneric.Target>
+                                <uix:TargetAnchorable BrowserURL="https://my304870.s4hana.ondemand.com/sap/bc/gui/sap/its/webgui;~sysid=SUY;~service=3200?sap-iframe-hint=GUI#" DesignTimeRectangle="114, 505, 114, 16" DesignTimeScaleFactor="1" FriendlyName="'UCF_SUGGESTBOX tbl2[11,…'" FullSelectorArgument="[string.Format(&quot;&lt;webctrl sapweb-id='wnd[0]/usr/tabsSTRIB/tabpPEIN/ssubSUB2:SAPLM60E:0102/tblSAPLM60ETC_SCHEDULE/ctxtRM60E-EDATU[{0},{1}]' /&gt;&quot;, int_ColumnNum, int_RowNum)]" FuzzySelectorArgument="&lt;webctrl id='application-ForecastDemand-create-iframe' tag='IFRAME' /&gt;&lt;webctrl sapweb-id='wnd[0]/usr/tabsSTRIB/tabpPEIN/ssubSUB2:SAPLM60E:0102/tblSAPLM60ETC_SCHEDULE/ctxtRM60E-EDATU[1,10]' tag='SPAN' type='' class='lsField__input' aaname='' /&gt;" Guid="a7f6930a-a2a1-4d2e-97f7-571957f69d0f" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHYAAAAUCAYAAABYm8lAAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABZSURBVGhD7dFBDYAwAMBA/Gc29ybMwAigguYelwrocV5rzzn3U/5vjPHW2Bhjo4yNMjbK2Chjo4yNMjbK2Chjo4yNMjbK2Chjo4yNMjbK2Chjo4yN+saufQOxOBZyWNIvawAAAABJRU5ErkJggg==" InformativeScreenshot="15741795430a95e3c2467e6e807dcb2a.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Plnd Ind. Reqmts Create: Schedule Lines' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                              </uix:NGetAttributeGeneric.Target>
+                            </uix:NGetAttributeGeneric>
+                            <ui:LogMessage DisplayName="Log Message - Get Requirement Date" sap:VirtualizedContainerService.HintSize="532,92" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="Info" Message="[str_GetRequirementDate]" />
+                            <ui:InterruptibleWhile CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="checking all the date for null date for type&#xA;" Condition="[str_GetRequirementDate &lt;&gt; Nothing]" DisplayName="While - checking all the dates " sap:VirtualizedContainerService.HintSize="532,780" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+                              <ui:InterruptibleWhile.Body>
+                                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="496,572" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_6">
+                                    <Assign.To>
+                                      <OutArgument x:TypeArguments="x:Int32">[int_RowNum]</OutArgument>
+                                    </Assign.To>
+                                    <Assign.Value>
+                                      <InArgument x:TypeArguments="x:Int32">[int_RowNum + 1]</InArgument>
+                                    </Assign.Value>
+                                  </Assign>
+                                  <uix:NGetAttributeGeneric x:TypeArguments="x:String" Attribute="aaname" DisplayName="Get Attribute Requirement Date" sap:VirtualizedContainerService.HintSize="434,207" sap2010:WorkflowViewState.IdRef="NGetAttributeGeneric`1_5" Result="[str_GetRequirementDate]" ScopeIdentifier="09bda359-7a31-45ef-99d6-5177da0e5b35" Version="V3">
+                                    <uix:NGetAttributeGeneric.Target>
+                                      <uix:TargetAnchorable BrowserURL="https://my304870.s4hana.ondemand.com/sap/bc/gui/sap/its/webgui;~sysid=SUY;~service=3200?sap-iframe-hint=GUI#" DesignTimeRectangle="114, 505, 114, 16" DesignTimeScaleFactor="1" FriendlyName="'UCF_SUGGESTBOX tbl2[11,…'" FullSelectorArgument="[string.Format(&quot;&lt;webctrl sapweb-id='wnd[0]/usr/tabsSTRIB/tabpPEIN/ssubSUB2:SAPLM60E:0102/tblSAPLM60ETC_SCHEDULE/ctxtRM60E-EDATU[{0},{1}]' /&gt;&quot;, int_ColumnNum, int_RowNum)]" FuzzySelectorArgument="&lt;webctrl id='application-ForecastDemand-create-iframe' tag='IFRAME' /&gt;&lt;webctrl sapweb-id='wnd[0]/usr/tabsSTRIB/tabpPEIN/ssubSUB2:SAPLM60E:0102/tblSAPLM60ETC_SCHEDULE/ctxtRM60E-EDATU[1,10]' tag='SPAN' type='' class='lsField__input' aaname='' /&gt;" Guid="a7f6930a-a2a1-4d2e-97f7-571957f69d0f" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHYAAAAUCAYAAABYm8lAAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABZSURBVGhD7dFBDYAwAMBA/Gc29ybMwAigguYelwrocV5rzzn3U/5vjPHW2Bhjo4yNMjbK2Chjo4yNMjbK2Chjo4yNMjbK2Chjo4yNMjbK2Chjo4yN+saufQOxOBZyWNIvawAAAABJRU5ErkJggg==" InformativeScreenshot="15741795430a95e3c2467e6e807dcb2a.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Plnd Ind. Reqmts Create: Schedule Lines' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                                    </uix:NGetAttributeGeneric.Target>
+                                  </uix:NGetAttributeGeneric>
+                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,92" sap2010:WorkflowViewState.IdRef="LogMessage_10" Level="Info" Message="[str_GetRequirementDate]" />
+                                </Sequence>
+                              </ui:InterruptibleWhile.Body>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </ui:InterruptibleWhile>
+                            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into Requirement Table Date" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="532,218" sap2010:WorkflowViewState.IdRef="NTypeInto_12" InteractionMode="WindowMessages" ScopeIdentifier="09bda359-7a31-45ef-99d6-5177da0e5b35" Text="[str_DateforRequest.Trim]" Version="V3">
+                              <uix:NTypeInto.Target>
+                                <uix:TargetAnchorable BrowserURL="https://my304870.s4hana.ondemand.com/sap/bc/gui/sap/its/webgui;~sysid=SUY;~service=3200?sap-iframe-hint=GUI#" DesignTimeRectangle="114, 751, 114, 24" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'UCF_SUGGESTBOX tbl1[11,…'" FullSelectorArgument="[string.Format(&quot;&lt;webctrl sapweb-id='wnd[0]/usr/tabsSTRIB/tabpPEIN/ssubSUB2:SAPLM60E:0102/tblSAPLM60ETC_SCHEDULE/ctxtRM60E-EDATU[{0},{1}]' /&gt;&quot;, int_ColumnNum, int_RowNum)]" FuzzySelectorArgument="&lt;webctrl id='application-ForecastDemand-create-iframe' tag='IFRAME' /&gt;&lt;webctrl sapweb-id='wnd[0]/usr/tabsSTRIB/tabpPEIN/ssubSUB2:SAPLM60E:0102/tblSAPLM60ETC_SCHEDULE/ctxtRM60E-EDATU[1,10]' tag='INPUT' type='text' class='lsField__input' aaname='' /&gt;" Guid="f4b9bfbd-6f2a-4254-a6f8-01b4250cf638" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHYAAAAcCAYAAAC0yEstAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACtSURBVGhD7dsxCsIwHEbx3MHd3bUn8yC5ZpYiDqJzaiKFiBWy/h/vwUcoHX+QLam+K6W0wwDlnPuZGqqLvfV2/1mq67P/TNeHC7oG+VqWrwkL2BSsxWuE/XsVW7ymYU/nSz8tRsJCExaasNCEhSYsNGGhCQtNWGjCQhMWmrDQhIUmLDRhoQkLbRrWYiUstEPY9jHCungbYfcJC9ghbEN1sbdfv+N84gHr88Sj1g34yXoK8wYrfQAAAABJRU5ErkJggg==" InformativeScreenshot="8a3e1588ea452bac9c8e2385893e750a.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Plnd Ind. Reqmts Create: Schedule Lines' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" WaitForReadyArgument="Complete" />
+                              </uix:NTypeInto.Target>
+                            </uix:NTypeInto>
+                            <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey - TAB" sap:VirtualizedContainerService.HintSize="532,137" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="tab" KeyModifiers="None" SpecialKey="True">
+                              <ui:SendHotkey.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="eb72a57a-4a62-4bc4-8859-bab2bef91f09">
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                  <ui:Target.WaitForReady>
+                                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                                  </ui:Target.WaitForReady>
+                                </ui:Target>
+                              </ui:SendHotkey.Target>
+                            </ui:SendHotkey>
+                            <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into Quantity" sap:VirtualizedContainerService.HintSize="532,115" sap2010:WorkflowViewState.IdRef="TypeInto_1" Text="[out_MaterialQuantity.ToString]">
+                              <ui:TypeInto.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="1f2666ac-d7e6-4a9e-a2db-ad875719a696">
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                  <ui:Target.WaitForReady>
+                                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                                  </ui:Target.WaitForReady>
+                                </ui:Target>
+                              </ui:TypeInto.Target>
+                            </ui:TypeInto>
+                          </Sequence>
+                        </Sequence>
+                      </ActivityAction>
+                    </ui:ForEachRow.Body>
+                  </ui:ForEachRow>
+                </Sequence>
+              </uix:NCheckState.IfExists>
+              <uix:NCheckState.IfNotExists>
+                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,207" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:LogMessage DisplayName="Log Message - Schedule Lines screen not appread" sap:VirtualizedContainerService.HintSize="388,92" sap2010:WorkflowViewState.IdRef="LogMessage_11" Level="Info" Message="[&quot;Schedule Lines screen not appread&quot;]" />
+                </Sequence>
+              </uix:NCheckState.IfNotExists>
+              <uix:NCheckState.Target>
+                <uix:TargetAnchorable BrowserURL="https://my304870.s4hana.ondemand.com/sap/bc/gui/sap/its/webgui;~sysid=SUY;~service=3200?sap-iframe-hint=GUI#" DesignTimeRectangle="207, 291, 109, 32" DesignTimeScaleFactor="1" FriendlyName="'Schedule LinesSchedule'" FullSelectorArgument="&lt;webctrl tag='DIV' visibleinnertext='Schedule Lines' /&gt;" FuzzySelectorArgument="&lt;webctrl id='application-ForecastDemand-create-iframe' tag='IFRAME' /&gt;&lt;webctrl sapweb-id='wnd[0]/usr/tabsSTRIB/tabpPEIN' tag='DIV' type='' class='lsTbsItem--scrollable lsTbsv5-LastItemSel' aaname='' check:innerText='Schedule Lines' /&gt;" Guid="b0331c23-57c8-43ac-9ff5-3c183cb38857" ImageBase64="" InformativeScreenshot="d4c8da7ee550ccaa270c1b77652fc6fa.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Plnd Ind. Reqmts Create: Schedule Lines' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NCheckState.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NCheckState>
+            <uix:NCheckState DisplayName="Check App State 'Warning Message'" sap:VirtualizedContainerService.HintSize="1520,1190" sap2010:WorkflowViewState.IdRef="NCheckState_10" ScopeIdentifier="09bda359-7a31-45ef-99d6-5177da0e5b35" Timeout="[int_DelayForCheckApp]" Version="V3">
+              <uix:NCheckState.IfExists>
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,337" sap2010:WorkflowViewState.IdRef="Sequence_26">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:LogMessage DisplayName="Log Message - bussiness Rule Exception coccured" sap:VirtualizedContainerService.HintSize="388,92" sap2010:WorkflowViewState.IdRef="LogMessage_13" Level="Info" Message="[&quot;Bussiness Rule Exception occred at Warning pop up&quot;]" />
+                  <Throw DisplayName="Throw - Warning aleart" Exception="[new BusinessRuleException(&quot;Warning aleart for the transaction number : &quot; + in_TransactionNumber.ToString)]" sap:VirtualizedContainerService.HintSize="388,90" sap2010:WorkflowViewState.IdRef="Throw_2" />
+                </Sequence>
+              </uix:NCheckState.IfExists>
+              <uix:NCheckState.IfNotExists>
+                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="1016,973" sap2010:WorkflowViewState.IdRef="Sequence_27">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Save'" sap:VirtualizedContainerService.HintSize="954,157" sap2010:WorkflowViewState.IdRef="NClick_5" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="09bda359-7a31-45ef-99d6-5177da0e5b35" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://my304870.s4hana.ondemand.com/sap(cz1TSUQlM2FBTk9OJTNhdmhzaHBzdXljaV9TVVlfMDAlM2F2WnlCYmE5MlhyY2l5cFhnWlZyWjNuM3Y2cS1pZVN4Ty1McU4tazFLLUFUVA==)/bc/gui/sap/its/webgui/" DesignTimeRectangle="1779, 1015, 41, 26" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Save Emphasized'" FullSelectorArgument="&lt;webctrl innertext='Save*' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl innertext='Save*' tag='DIV' type='' class='lsButton lsButton--base urInlineMetricTop urNoUserSelect urBtnRadius lsButton--useintoolbar lsButton--active lsButton--focusable lsButton--up lsButton--design-emphasized' aaname='' check:text='Save Emphasized' /&gt;" Guid="84e21380-00b8-4c19-ad93-353c1f0d5cb9" ImageBase64="" InformativeScreenshot="9a3c556cc6a979050e2f0f1993b08aad.png" ScopeSelectorArgument="[string.Format(&quot;&lt;html app='{0}' title='*' /&gt;&quot;, BrowserAppName)]" SearchSteps="Selector" Version="V2" Visibility="Interactive" WaitForReadyArgument="Complete" />
+                    </uix:NClick.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NClick>
+                  <uix:NCheckState DisplayName="Check App State 'Success Message'" sap:VirtualizedContainerService.HintSize="954,661" sap2010:WorkflowViewState.IdRef="NCheckState_7" ScopeIdentifier="09bda359-7a31-45ef-99d6-5177da0e5b35" Timeout="[int_DelayForCheckApp]" Version="V3">
+                    <uix:NCheckState.IfExists>
+                      <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,404" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <uix:NGetText DisplayName="Get Text 'Success Message'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="09bda359-7a31-45ef-99d6-5177da0e5b35" TextString="[out_RequirementSaved]" Version="V3">
+                          <uix:NGetText.Target>
+                            <uix:TargetAnchorable BrowserURL="https://my304870.s4hana.ondemand.com/sap/bc/gui/sap/its/webgui;~sysid=SUY;~service=3200?sap-iframe-hint=GUI#" DesignTimeRectangle="56, 1012, 165, 32" DesignTimeScaleFactor="1" FriendlyName="'Success Message'" FullSelectorArgument="&lt;webctrl tag='DIV' visibleinnertext='Requirement saved' /&gt;" FuzzySelectorArgument="&lt;webctrl id='application-ForecastDemand-create-iframe' tag='IFRAME' /&gt;&lt;webctrl sapweb-id='wnd[0]/sbar_msg' tag='DIV' type='' class='lsMessageBar lsMessageBar--nowrapping lsMessageBar--width-default lsMessageBar--ruleBottom lsMessageBar--transparent' aaname='' /&gt;" Guid="fafbe61e-3c8e-4164-abc3-c6b7586835e4" ImageBase64="" InformativeScreenshot="c4fa6bfe8dc647f7206db9e871dcdc11.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Create Planned Independent Requirements: Initial Screen' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                          </uix:NGetText.Target>
+                        </uix:NGetText>
+                        <ui:LogMessage DisplayName="Log Message - Requirement Process is Completed for transaction Number" sap:VirtualizedContainerService.HintSize="388,92" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[&quot;Requirement Process is Completed for transaction Number : &quot; + in_TransactionNumber]" />
+                      </Sequence>
+                    </uix:NCheckState.IfExists>
+                    <uix:NCheckState.IfNotExists>
+                      <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,337" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:LogMessage DisplayName="Log Message - Requirement Process is not Completed for transaction Number" sap:VirtualizedContainerService.HintSize="388,92" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Info" Message="[&quot;Requirement Process is not Completed for transaction Number : &quot; + in_TransactionNumber]" />
+                        <Throw DisplayName="Throw - Requirement Process is not Completed for transaction Number" Exception="[new BusinessRuleException(&quot;Requirement Process is not Completed for transaction Number : &quot; + in_TransactionNumber)]" sap:VirtualizedContainerService.HintSize="388,90" sap2010:WorkflowViewState.IdRef="Throw_1" />
+                      </Sequence>
+                    </uix:NCheckState.IfNotExists>
+                    <uix:NCheckState.Target>
+                      <uix:TargetAnchorable BrowserURL="https://my304870.s4hana.ondemand.com/sap(cz1TSUQlM2FBTk9OJTNhdmhzaHBzdXljaV9TVVlfMDAlM2F2WnlCYmE5MlhyY2l5cFhnWlZyWjNuM3Y2cS1pZVN4Ty1McU4tazFLLUFUVA==)/bc/gui/sap/its/webgui/" DesignTimeRectangle="56, 1012, 165, 32" DesignTimeScaleFactor="1" FriendlyName="'Success Message'" FullSelectorArgument="&lt;webctrl tag='DIV' visibleinnertext='Requirement saved' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='DIV' visibleinnertext='Requirement saved' type='' class='lsMessageBar lsMessageBar--nowrapping lsMessageBar--width-default lsMessageBar--ruleBottom lsMessageBar--transparent' aaname='' check:text='Success Message Bar Requirement savedRequirement saved' /&gt;" Guid="701f21e2-1c56-40c4-9a1a-8221d625270c" InformativeScreenshot="452bcf55feb17d8e997430d998a59a33.png" ScopeSelectorArgument="[string.Format(&quot;&lt;html app='{0}' title='*' /&gt;&quot;, BrowserAppName)]" SearchSteps="Selector" Version="V2" Visibility="Interactive" WaitForReadyArgument="Complete" />
+                    </uix:NCheckState.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NCheckState>
+                </Sequence>
+              </uix:NCheckState.IfNotExists>
+              <uix:NCheckState.Target>
+                <uix:TargetAnchorable BrowserURL="https://my304870.s4hana.ondemand.com/sap/bc/gui/sap/its/webgui;~sysid=SUY;~service=3200?sap-iframe-hint=GUI#" DesignTimeRectangle="56, 1012, 460, 32" DesignTimeScaleFactor="1" FriendlyName="'Warning Message'" FullSelectorArgument="&lt;webctrl sapweb-id='wnd[0]/sbar_msg' /&gt;" FuzzySelectorArgument="&lt;webctrl id='application-ForecastDemand-create-iframe' tag='IFRAME' /&gt;&lt;webctrl sapweb-id='wnd[0]/sbar_msg' tag='DIV' type='' class='lsMessageBar lsMessageBar--nowrapping lsMessageBar--width-default lsMessageBar--ruleBottom lsMessageBar--transparent' aaname='' check:innerText='Date is not within the planning horizon  ( 07/03/2023 - 07/25/2023 )' /&gt;" Guid="a20943b9-32db-4358-a16c-b5a5c811155a" ImageBase64="" InformativeScreenshot="8100325333c9eccddbd2ac6d32d1bd49.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Plnd Ind. Reqmts Create: Schedule Lines' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NCheckState.Target>
+            </uix:NCheckState>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-8, -8, 1936, 1056" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAzSSURBVGhDxZkJWJVVGsevgeaCgqiByr7D5bJcdlEWMQRRoJxRKxUcM3XMnEl7shUnxzLDIFwoNzS12Ww07XEal5gZV8qknnkqa8rrAi6pXMGmIPC8875n+e536ROtnJn3ef7Pu5zz3fN7zznf1aum22F9XV08Jnl7li4O862osQRvPzYsxvbFiDj7xZGJcHFkEnyREW9/Py3att0aXrs41Ldi9CCPYp+ePQLk4/8fI+iZvl7ztseF1SpQ4XVxtsqFLmQnSGGcZWX7EiPqJ3gNKPmfNkPgjwUMKfvXiNimi9kJjIMhjJMncIKUoKqmchEnwPnMeHYhCxtCVYb71/zXG3ksYDCCq6shIDQwFK9lEqDY6fMYc0iKJaiIrTwXUjF5Kyzw9y6Ty90+o53Zn2iu57vHd5BgnL0GKndVASlwLc9UdSucy4jDBtFzxfOcfF2K2XbbTmOC18CSz4fH2h07aRVAGqgeVkpBZcQzPaRWH0GgFCM0B3eokY/FwyfDLPbcAe7FEuPHGR2nglVgajcJTngEJC8BOaTcSeEFKIE1EiSPY7Ex9Ao6I47HQipGPyIOHvX1+nFXar6fd5l+dx0wupgA0Ktd47EE4WMy1tcah8diIwhHHgHJN8iYfEO6LhYem7jrhzVBX23qmLs8dukFoNgxHhOQ8lRTQLLOwVQdgQnSIQGtdJY0LIZN8OpfIvG6Nnp5Pk2zNHFAOnZclB875Tppuyg9LiZiAkOvIBvSY8ROkico5TuJg3aKudKF/pkS1eRzZ/ebv9h1KVE2p10kIIolkN7zWAHqpe1i51wCDrMwDZBiCXkmjeIYjIX0+Zm0aLY7NrReYhobvTDaLpJ04M6ADhgug10lOOUFIIEoj0AIfkZXI0CR05jDC1m4TuOcX/l6LZK4ztZjYO+Al36d5dhNhMIPUS+UBHLENMa9EgI15KVD8/pqaD3+PrSfawTN2luANR+D66fKoaO+EDrqElEJ0H7UyjqOJoicvIpxrEMb47Gmy3tj7B5uLh4S22EBs6wbMzYWw/ExSRJWB8cBJbDcJf2unv9ZHoe+VWNf7cJGxkqoeNZ+NI61H4lDYAlax+vYINXieSxqIn9murfzKfQY0DvA+sa9kICa/dtcDYyO2RlaiI6aC4/UXvkiXG9pkWjCztkZvP1hG6ytbYU1qL+d+A4+P98hR6V1tOCJLEOgOASN5V7Aqhx1hGpC2CAqhtcv74l2PgXPDL/SuK1FLH5rMVi33gO7f54iAcU9dbqLdFcxpvt4dd1qSSNsV30bzNr4NSSVXYXkRc3cJy2Swrio8hrO+U7OFnb9bLUCg44jsRijx/g6gcsYx8XY4WhsiuIYeGTiwHkS32SKWJJdH7eliBE8NTJ1WZ6AldCnUwkavVKaBZoql0oE2vHrMLNGgCdK4ESKpXidvGyK5tIzyvAkOJSQBa+TRcKiR5HnMdbaj5h5fd+qgFoOT9cndnMhi8UG4rcUQxyK/MqZ6ex0qpnhTnNgik/JvKE4l6lrQyDjKlqcgBOedUir6cZJ9IzWBL7kHcfzENLM2g8TYDTG0QjsiDsOkzejorSaR587PEz9EryK4jYXQWelry+EjzMs7FQKgVMT0UD+VEoUu/b2DrEw2kMbriGoXScBa3Wq2R05jql8Bj6rjDW/J6ERkItgzZhHUo4NYE6emuB5FEzNdy81DbnfXBH7eiEIFXFPDcS8Po4tnTtCg7almMGWaoaGe3LlkgA78c4TiLFEE8ZyjO083iY/Dd/r91I1OKFIzWMj6COwGYojuJY/clelKXhhWm3MpkKwbBrH9E1YNo1lVK+7Ow44vNSVl1+QywEULG+G+GfsDiGQU34j6eY9qDuF62dWSmgEPBTOSB0kzGVNNxYBb77gs8MUWZ5ji9k0Doxk2TiW3bckh9mSItlJlC05Cr794D2+2An8WoxDABKBqLhrNRnU7Nq7wK7WcUCEFjoczqHbD4ZSI1gLwzwU4SkPgy+3BdpM0RsLWMxGBEZZuMbymOoUU21nUTxv4CQ2oF7edz/5DmIRiOtp6SWg8Pqavo6e5qPUnLfUNWptQMAwDtpxKFTnhdoPhjBshvuOQyFw6S+BdpOlZixE1yAs+hsppyoPTiZGsC8TwplYCaD63W8hBiGUFKxTzSBW8Pr66v3fyE/F9+BgCAGigjmkUvvBINZxMJiP8xrF6E3mmjEsGiGdVQDRG1AYmzeMYVGoyump8GVChNYALaog9LJ0kXceMz/eCIHT9kDK1AqIH/8EDM6cDYOHT2XWgkls4rRC2FIxDK7sxVM4GCR0KJgagfYDgdgceoxNkStH26M25DMzAaMoJm9eP4bnVI9an8+Sq/Pgo/Qo/EtaA29gx/FWsDzVBNFPXeGe4LjXx528mhu54BQMGb8B+qU8BH2TftGlBqaVwIL5udC4G9+FAwF4CoEIjjoQgE0FgilkWZaNIEmRCKqBo1eiOmnhvHT45lgdb6ARXzwCEhJwxnIeC5pxAPqlzjaE7UpDhk+Ft1YncvD2A36M9MUfh9pMPnOs26PWjcFdFrBR6/Kd4sh1eYzE6zjv2LY1vAGy0nXNYEYoM0IKf2NFPXkJhk58wxDu1jWNPf9MJrT93Q/a/+HL9lV51Zq8J0VVCDgBy5uROSli7WhsgHweI02qKJL4ANs/aEMwhCNADqlgvy//0j0GQD9ONeUpeAq+sPxh90qTe9rQUoLkoGvzgMSbWaskakIirzv3kWwBoGRtC0QioBLBRj55WQOnWuDMo9A3+UFDGCW3xGmGsZH6p5TCnnWxUDi8Z5HJpZerB4dbkwfha3J5ExE8xqbQ60U1mpPzuxJoafuaN9DQdB1GLbNDBEITeMQTwjviKzAov9wQRImA3VOmQ++EUi6Kb9bEhNICFuDlIn7k+85Pqo1YM1qCjobw13IRHvPXVE3UeS5rSw5X8wbIqImpa5s5cGeFzrcZAigRaD/03cz3w8D0mVx3YNwv+WYnMY11695rMG/AI8dvXjiCKYW9ejdz5LlOdT72qqitOLZZtiDsz8daYeSLTRCG4OEo8j5TdhksLuSGck+ezoHvW7ACTp+7xDXx0SpwwRqN0RyjZ0ndB0XM4g3c0dPVI6Qi2x6KcCQOKCHJh0nRGHl9jU6ipVVcJ2WfNnbA3o/boGrvv8Ey4XnDxZV6W0thwLCH4MLlq/Jp/I1xsQk8Ux/k18noGaVeYbnv8AbIPMcGlSmosGqErR7FwqrvxhiFtRCZh6xGL/NQOZ655QH25om/yuWdbWjWHMPFlaiBgdjApSbH7+qvrjRjUzP4mNEzSm7xk69KfHEKQeVZTQosdDWKPI9HOeUEreU0JvOszZNhycFqONr4IZxtucBhaHcNF8f7TfJMmwGm8IlQMGsZfPTZafjwxCnIn7mU12hMzTP8jISSVokvrH9BUBnuMIcJXp3DNHDulUQevIrG+YloMdVDVglRjXzflGnMaHElU+Qk8B81FwrnlMOy9TvhxXU7eeyXM5eP0Ry3pBs0oD8BZb4LU+oVhJKCD1mVI6Uf75zrazngnjX1+wuj6Fumu2UyzF2ykV+ZznYR34lfPrcB5zwgvpE6fQapT/T4ExLbYa6ePQMCX8qwB6/MASUC0fuglSOZ8NmMYoIlL5TNx5QG3DvR8AR6xpfA4IzZ0NrWzoEZ0/6iq8Xftn4H3hmzoBfONfyMkJwdEtvZ+iZ7lwauyGYkATJSCuMV6EmYB6F3zBFjlGt19N6zi40XRyif7Dlw8uxFaGr+Gq6g7C1CFFONxnxGPsznGn2G9jVqZJ75QYsIxEiBVVkapFavyv7ePJLf4tGGi9OLSX+A+SIg3Xcj0Zia2/l5Urcebl3/c7tHfkAZB0MFIHSg9CSC4/ErGFdRU9lc2rjMyXsWipdRSd1nAqPd7UoKvvM7cMPr09l6Rw8s9ls63I6gGmTgK9ng/0omwmcyilUtEOdQnUQ5PUOxz3OjGH4bOQEoMDqFrqSfqz2LX5/devTxkYg3N9f+PQN8nk2xccBKBK+UHnMOibF/ZQZKjGnSxjNYweNZThA/Ra4DQm7tv5s6m3uef5kC80OogMpMDupXQbHwKvavEGOk9FWpcOqd/rB4YbIh0A9RjyHxxv/BcatGpzHgvvAaAiVIvXyXj+AN+FaM4GMY8/raP+DPwP13svb9PWFHVQj+PJxiCNeV3KyTm13cfcdKjJ9u1Ihbknfp4AUJ9QTOgV/O0CRqGTBsZSrBO7TvTrBt82Djp+QaghqpV+ioXXjnfeXSt9+oGXrZPYqDKgbNttQOeTrZRk34lA9nv//TULj0lqv9862utm2/cd1ePtulYsrobiUefbp5uPT1zsArUdYrNHc3/anqZp1yjdTHMv4zqtF1oTlyGQMzmf4D4KFTGJwAIeUAAAAASUVORK5CYII=" InformativeScreenshot="14ce6c428b6a26efceab14f3bc95433f.jpg" Selector="[string.Format(&quot;&lt;html app='{0}' title='*' /&gt;&quot;, BrowserAppName)]" Title="Home" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

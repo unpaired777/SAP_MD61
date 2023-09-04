@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="X_Zddf2BjUC3dhOAcIWAYQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://my305028.s4hana.ondemand.com/ui#SalesOrder-manageSalesOrderV2?preferredMode=create&amp;sap-app-origin-hint=&amp;/SalesOrderManage('183411')?sap-iapp-state=AS0HEJZDJGE6NKUMZAAYOFKLMOT2EMQMIY1PCTEM" DesignTimeRectangle="950, 223, 24, 32" DesignTimeScaleFactor="1" FriendlyName="'Expand Header'" FullSelectorArgument="&lt;webctrl innertext='Expand Header' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl innertext='Expand Header' tag='BUTTON' type='' class='sapMBtnBase sapMBtn sapFDynamicPageToggleHeaderIndicator' aaname='Expand Header' check:text='Expand Header' /&gt;" Guid="81570d95-49b4-499a-9358-00ce89acd0df" ScopeSelectorArgument="[string.Format(&quot;&lt;html app='{0}' title='*' /&gt;&quot;, BrowserAppName)]" SearchSteps="Selector" Version="V2" Visibility="Interactive" WaitForReadyArgument="Complete">
+      <imageRef attrName="InformativeScreenshot" originalValue="a3f367dea587e6da92de7fef992b9d8a.png" xmlns="">0LfaBpjXet0ufx7mF4v-adg</imageRef>
+    </TargetAnchorable>
+    <scg:List x:TypeArguments="ObjectRepositoryVariableData" x:Key="Variables" Capacity="1">
+      <ObjectRepositoryVariableData Name="BrowserAppName" />
+    </scg:List>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

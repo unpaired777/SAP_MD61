@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="yVExv0QEoUmV_jIBHM4Mfw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://my305028.s4hana.ondemand.com/ui?sap-language=EN&amp;help-mixedLanguages=false#SalesOrder-manageSalesOrderV2?preferredMode=create&amp;/SalesOrderManage(...)?i-action=create" DesignTimeRectangle="840, 609, 128, 24" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Standard Order (OR)'" FullSelectorArgument="[string.Format(&quot;&lt;webctrl innertext='{0}' tag='SPAN' /&gt;&quot;, str_OrderType)]" FuzzySelectorArgument="&lt;webctrl id='com.sap.gateway.srvd.c_salesordermanage_sd.v0001.CreateWithSalesOrderType::SalesOrderType::SuggestTable' /&gt;&lt;webctrl innertext='Standard Order (OR)' tag='SPAN' type='' class='sapMText sapUiSelectable sapMTextMaxWidth' aaname='Standard Order (OR)' check:text='Standard Order (OR)' /&gt;" Guid="bb9fbabe-6cd1-43f5-952b-f1fe39efe394" ImageBase64="" ScopeSelectorArgument="[string.Format(&quot;&lt;html app='{0}' title='*' /&gt;&quot;, BrowserAppName)]" SearchSteps="Selector" Version="V2" Visibility="Interactive" WaitForReadyArgument="Complete">
+      <imageRef attrName="InformativeScreenshot" originalValue="a730e6d2b43a2b0e70b95707d11a6601.png" xmlns="">a730e6d2b43a2b0e70b95707d11a6601.png</imageRef>
+    </TargetAnchorable>
+    <scg:List x:TypeArguments="ObjectRepositoryVariableData" x:Key="Variables" Capacity="2">
+      <ObjectRepositoryVariableData Name="BrowserAppName" />
+      <ObjectRepositoryVariableData Name="str_OrderType" />
+    </scg:List>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

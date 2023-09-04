@@ -1,0 +1,10 @@
+﻿Dear Team,<br><br>
+
+Process of SAP Create Planned Independent Requirment Process has Interrupted Due to <reason>.<br><br>
+
+at <response>.<br><br>
+
+Thanks and Regards,<br><br>
+RPA Team
+
+This is auto generated email, please do no reply on this email.

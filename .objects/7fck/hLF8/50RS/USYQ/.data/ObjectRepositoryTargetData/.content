@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="iCZvzzpmik6AT1bfbPa8zQ" Reference="hz4LrFmUMEiEUgYjo26OTg/USYQAksoeEmnvNpcrysibQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://www.google.com/recaptcha/api2/bframe?hl=en&amp;v=vkGiR-M4noX1963Xi_DB0JeI&amp;k=6Le-wvkSAAAAAPBMRTvw0Q4Muexq9bi0DJwx_mJ-" ContentHash="WdhwT44doEWaW3TpOuZ7HA" DesignTimeRectangle="113, 487, 240, 40" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT audio-response'" FullSelectorArgument="&lt;webctrl name='c-rmratcdop2ee' tag='IFRAME' /&gt;&lt;webctrl id='audio-response' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl name='c-rmratcdop2ee' tag='IFRAME' /&gt;&lt;webctrl id='audio-response' tag='INPUT' type='text' class='rc-response-input-field label-input-label' aaname='' /&gt;" Guid="f5d20521-e7bb-4242-838d-80cfd14f7552" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAPQAAAAsCAYAAABSQpW8AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADfSURBVHhe7dMxCkMxDETB3P+SH3wEV+4cFGKTIhfQMgNbCNXvtYEYgoYgN+g55x5j7Od5zKzJqtlq97hB12Ot9b2ADqrZave4QVftQD+/7QoamhM0BBE0BBE0BBE0BBE0BBE0BBE0BBE0BBE0BBE0BBE0BBE0BBE0BBE0BBE0BBE0BBE0BBE0BBE0BBE0BBE0BBE0BBE0BBE0BBE0BBE0BBE0BBE0BBE0BBE0BBE0BBE0BBE0BBE0BPkb9Bhjr7W+F9BBNVvtHjfoOefnUbWbWY9Vs9XucYMG+hM0xNj7DYXzUlPkYq7OAAAAAElFTkSuQmCC" Reference="hz4LrFmUMEiEUgYjo26OTg/USYQAksoeEmnvNpcrysibQ" ScopeSelectorArgument="[string.Format(&quot;&lt;html app='{0}' title='*' /&gt;&quot;, BrowserAppName)]" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" WaitForReadyArgument="Complete">
+      <imageRef attrName="InformativeScreenshot" originalValue="4f7cf646d9c7fc03e092b37743b9700e.png" xmlns="">4f7cf646d9c7fc03e092b37743b9700e.png</imageRef>
+    </TargetAnchorable>
+    <scg:List x:TypeArguments="ObjectRepositoryVariableData" x:Key="Variables" Capacity="1">
+      <ObjectRepositoryVariableData IsVariable="False" Name="BrowserAppName" />
+    </scg:List>
+    <x:String x:Key="ActivityType">TypeInto</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

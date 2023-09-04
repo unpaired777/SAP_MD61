@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="w5LE9nvxxEGwTm0kNjeeuQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://my305028.s4hana.ondemand.com/ui#SalesOrder-manageSalesOrderV2?preferredMode=create&amp;/?sap-iapp-state=AS7S5J3XU5BGWKTQXWSZLJ15TR24PU0FNGTUHPP2" CvElementArea="686, 87, 72, 36" CvTextArea="703, 97, 18, 13" CvTextArgument="All" CvType="InputBox" DesignTimeRectangle="696, 89, 64, 32" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'All'" FullSelectorArgument="&lt;webctrl innertext='AllAll' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl id='searchFieldInShell-select' tag='DIV' type='' class='sapMSlt sapMSltDefault sapMSltMinWidth sapMSltAutoAdjustedWidth sapMSltHoverable sapMSltWithArrow searchSelect' aaname='' /&gt;" Guid="2636c689-803f-4bb7-82b7-b4043140a1e2" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEQAAAAeCAYAAACVBrgjAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAG9SURBVGhD7Zkxa8JAGIb9J/kDbuLoVEr7AxShXUTsKq1Lp0yCIB1KoYMglU6ZnHSpUAcpWOoiSJ0yGSgJKJbaiuPbi4mYfGRIJIqQL/BALm9yHE/uuwskBnEsVyt8/ywYQez3b+kZRJWY18Uow0IILITAQggshMBCCCyEsJMQVSlBiqcgd2buTG0iH79Hz273KinklYn7niNnByEqGtk0ZFmGJHdhOLNIChkpyKQVfE67kOMy2l+OLIpC3h/TyDyNxfkMHTmF66a+zfcsxOxPcvTvZoA7UcZSZeCR+SeYkPkQD6c5NEZW23itIlFsQdvkexUygVIwhXhJsWWYFJpQXVkwggn5qOPMLJdNe/qGcrIERbXbey8ZLynhyTAJJKRXObEH4+byWbXuOcga4pTiIAQZJv6FrGdDDrW+Dk3borZE2WTtWXOwRZVICUmGiW8hRqcKyVkuG9a7zRUaY3G+FlJCY6jDmFtCEuUuNIM8Ewq2lBBlmPgUoqN9k7J3F5pZu42VTdAsnou3doHaUEjs15FJikHfvri/V46YYItqBGAhBBZCYCEEFkJgIQQWQmAhBBZC4F+ZBP7Z7WKBfzg5zNoZnPspAAAAAElFTkSuQmCC" ScopeSelectorArgument="[string.Format(&quot;&lt;html app='{0}' title='*' /&gt;&quot;, BrowserAppName)]" SearchSteps="Selector" Version="V2" Visibility="Interactive" WaitForReadyArgument="Complete">
+      <TargetAnchorable.PointOffset>
+        <PointOffset Position="BottomLeft" X="17" Y="-17" />
+      </TargetAnchorable.PointOffset>
+      <imageRef attrName="InformativeScreenshot" originalValue="a4654c2dd3ff9087ef31fc61f622d97d.png" xmlns="">0NZeGlPpTNE2TvYA0QC3gIA</imageRef>
+    </TargetAnchorable>
+    <scg:List x:TypeArguments="ObjectRepositoryVariableData" x:Key="Variables" Capacity="1">
+      <ObjectRepositoryVariableData Name="BrowserAppName" />
+    </scg:List>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

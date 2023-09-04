@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="zSd0I2Ahi0uc0piw0tO5TA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://my305028.s4hana.ondemand.com/ui#SalesOrder-manageSalesOrderV2?preferredMode=create&amp;sap-app-origin-hint=&amp;/SalesOrderManage('182192')?sap-iapp-state=ASNDOFBE7FZZ3DD0DKZP3VB67KYYS34B91V6EOGB" DesignTimeRectangle="94, 276, 320, 48" DesignTimeScaleFactor="1" ElementType="ListItem" FriendlyName="'unchecked'" FullSelectorArgument="&lt;webctrl ui5-type='List Item' ui5p-icon='sap-icon://home' ui5p-title='Home' /&gt;" FuzzySelectorArgument="&lt;webctrl ui5-type='List Item' ui5p-icon='sap-icon://home' ui5p-title='Home' innertext='Home' tag='LI' type='' class='sapMLIB sapMLIB-CTX sapMLIBShowSeparator sapMLIBTypeActive sapMLIBActionable sapMLIBHoverable sapMLIBFocusable sapMSLI sapMSLIWrapping sapUshellNavigationMenuListItems' aaname='' check:text='unchecked' /&gt;" Guid="2fc33930-7ed7-4ed5-86b6-dfc3373566c2" ImageBase64="" ScopeSelectorArgument="[string.Format(&quot;&lt;html app='{0}' title='*' /&gt;&quot;, BrowserAppName)]" SearchSteps="Selector" Version="V2" Visibility="Interactive" WaitForReadyArgument="Complete">
+      <imageRef attrName="InformativeScreenshot" originalValue="71c16765e2519117c2a1ddabaf1f7f76.png" xmlns="">0EofgwsyIM0OBCvw3ZLVnag</imageRef>
+    </TargetAnchorable>
+    <scg:List x:TypeArguments="ObjectRepositoryVariableData" x:Key="Variables" Capacity="1">
+      <ObjectRepositoryVariableData Name="BrowserAppName" />
+    </scg:List>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

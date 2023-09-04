@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="ZPD9Su27BUWW7YrkL4oQxg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://my305028.s4hana.ondemand.com/ui#SalesOrder-manageSalesOrderV2?preferredMode=create&amp;sap-app-origin-hint=&amp;/SalesOrderManage('')?i-action=create&amp;sap-iapp-state=ASQD19C6645WUNQ7R4TVGQG5TGRJ9SE1P37BI1UA" DesignTimeRectangle="1069, 628, 136, 24" DesignTimeScaleFactor="1" FriendlyName="'TAN'" FullSelectorArgument="[string.Format(&quot;&lt;webctrl ui5-colLabel='Item Category' tag='DIV' innertext='{0}' /&gt;&quot;, str_Item_Category)]" FuzzySelectorArgument="&lt;webctrl ui5-colLabel='Item Category' tag='DIV' innertext='TAN' type='' class='' aaname='' check:text='TAN' /&gt;" Guid="0a6afd87-d3f0-4049-9a08-ac7a3bb4bc66" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAIwAAAAcCAYAAACzpld9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIkSURBVGhD7dhbS1RRGMZxv0lfoNsug7ro3i9gdKFGpVENAzOKMh4QHRXSQiwKlDA8FJUIwgRCHiIPiEokohWRUZZjmjMepnEeedfsPQ3DFvd72eL5wbrYa83Mzf6z9l5TBCIFBkMqDIZUGAypMBhSYTCkwmBIhcGQCoMhlVwwHd09OHP2vOeQNdeLkZiZG38768xkbf3eQcnVAMJ1rdg/OHBms+T7+b9B/69cMInknrnpMqIdD81wr2VNJPf2EYpE0RC9j5a7D5A+OjLzQj5XWhnCpeLLGJ+acWazGIw9PB9JJ93g5ZU1hCOt+Pj5CyqCEax/++6sZIORuWcvR3H9Ti0241vOCoOxiSqYR70D6Bt8ZXYW2WFGX79xVv4Fs7L6yexOT4eGkclkzBqDsYfvYLZ3/uBWqMHsMmLy3RzqWjpxeJgy124wsvvIKK0M46uzAzEYe/gOZmHpA4I1zUgkkuZ64+cmbgRqTRwiPxjZWR4/GUJndy/+ptMMxiK+gpEA5OYXnp5k9D8fMZ/JD0bIO4y8yyy+X2YwFvEVjOwmZTerMDu/ZMJwR2xs0uw6cnoqDEbExiZQVd+GpvYuBmMJX8HIfy63w425x5Hrx8Yvc5SWF12vYHZ3EwhUN+HKtSCDscSpwaRSKdRH75nTUSH3tCRrXsGI6bkFnLtYzGAs4RkM0UkYDKkwGFJhMKTCYEiFwZAKgyEVBkMqRRfK4+Dg8DfiOAaqC55DoU1DhQAAAABJRU5ErkJggg==" ScopeSelectorArgument="[string.Format(&quot;&lt;html app='{0}' title='*' /&gt;&quot;, BrowserAppName)]" SearchSteps="Selector" Version="V2" Visibility="Interactive" WaitForReadyArgument="Complete">
+      <imageRef attrName="InformativeScreenshot" originalValue="1d7288de76e5e454d6f5407decf37ca9.png" xmlns="">1d7288de76e5e454d6f5407decf37ca9.png</imageRef>
+    </TargetAnchorable>
+    <scg:List x:TypeArguments="ObjectRepositoryVariableData" x:Key="Variables" Capacity="2">
+      <ObjectRepositoryVariableData Name="BrowserAppName" />
+      <ObjectRepositoryVariableData Name="str_Item_Category" />
+    </scg:List>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

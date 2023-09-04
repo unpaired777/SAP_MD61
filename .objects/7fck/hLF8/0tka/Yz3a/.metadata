@@ -1,0 +1,14 @@
+﻿{
+  "Id": "Yz3amiLE2EywHhGI7sOTXw",
+  "Reference": "hz4LrFmUMEiEUgYjo26OTg/Yz3amiLE2EywHhGI7sOTXw",
+  "ParentRef": "hz4LrFmUMEiEUgYjo26OTg/0tkah7Xzfky_pDTpdxiRqQ",
+  "Name": "Create Sales Order",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Created": "2023-04-18T04:28:31.5060521Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=23.4.1.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=23.4.1.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2023-04-18T04:28:31.5060521Z"
+}

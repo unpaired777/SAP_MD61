@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="SuIohGUi8EuhswJoGmjcuw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://my305028.s4hana.ondemand.com/ui#SalesOrder-manageSalesOrderV2?preferredMode=create&amp;/SalesOrderManage('182377')?sap-iapp-state=ASADM9PH961U7NN4K5G67GV4Y7MLYQZ37VTM9NNK" CvTextArgument="182377" CvType="AnyWordGroup" DesignTimeRectangle="56, 160, 114, 37" DesignTimeScaleFactor="1" FriendlyName="'182377'" FullSelectorArgument="&lt;webctrl idx='2' ui5-role='heading' ui5p-text='182377' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='DIV' ui5-role='heading' ui5p-text='*' /&gt;" Guid="25fa0975-5780-4290-84b4-a38fe548c5a9" ImageBase64="" ScopeSelectorArgument="[string.Format(&quot;&lt;html app='{0}' title='*' /&gt;&quot;, BrowserAppName)]" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" WaitForReadyArgument="Complete">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="1">
+          <Target CvTextArgument="Partners" CvType="Text" DesignTimeRectangle="184, 245, 64, 18" FriendlyName="'Partners'" FullSelectorArgument="&lt;webctrl ui5-role='heading' ui5p-text='Partners' /&gt;" FuzzySelectorArgument="&lt;webctrl ui5-role='heading' ui5p-text='Partners' tag='DIV' check:innerText='Partners' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEQAAAAWCAYAAAB5VTpOAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANCSURBVFhH7ZXPSxtREMf7n/gPeAw5xdOCkIKIIEoklBAo2UMwpwTECg3xUAx62RxKBGEPpYGCCSVtEUsghyg57G1BaC5VMEgkhyhChMC3834tuxttgm2hLfuFB7uz8+bNft68ec8QyKMAiE8BEJ8CID4FQHxyAbFhzM5hZmxo0F7kYZ70pd//rSmAqKFh/ePvgGLDXIhSvBIsafmb9CAQw53p6Bat3biAsnqIC2l+sq7qSPF1/lUgTFZJAFE/QZA6n0rILS8ixO1RLGVMWNfcm+viQ4bPSVVtNF4nuZ/xXsVxjV2bvLuoJdl7FrXLLhoFHVqYvUeRKDRxMRIxuUZ9tN5uYmlOzA9pOrar3zBQPm25xu4pbDODCD2nqlTZlLNdySOhaeI7z7mEL2e3cqLQFBXSpwRXRBC9jh6zXdaxTgmHtCRyhT3k+BGg7wsmbJlYr5rlttiaLqFR3M9NlDd04TurY8vYR/lrl7z7qOnMlsR6mlVjFBH5w2wkKsyHNCJwafFDkZd7KBtsU8R74t134aM2j9ZNyPkMyOAoz59Dy3kU2bqFTcQof6M9BZCHR5xA3Utf0tD17MxdQflMWBSQmTDt+rmwcfmrjUsBoYTTdacibENuRPpYbATN5XBXK+ioirg7xRZfZ5+yIDnxKV/Xz6p8nufqsK/duXs1GchcHDF/ad3YqNBOi7L2DlVdDpAd3/mbAKTYliYmVf6yMp2YDw4Cf0VOKn6SwPIgUlfHvKqVPztqWwcWeu7jSJquh3jURWVN+C29OkTjxELrpIKcb66TPO8RLk0A4llb+fqBzGdF2XvGIayb8TluDc9PYdJGsr4iciAwuSYG8jvTE4AovzjMjjRRTxE3x58Fwt75kZmnuXfcY1w/AeJodI+eZcqKyaPBQEr9UoWEtCy2C1k6OhpCshwnArmm0pXrRBaSSPFmOCUQV1PlJb+zj+JGBjGKU2zLvvAIkCHZWRONZVgzZhX1BgmWc3gPraF0Ij0BCOmyie01cbMwKOW2PfZDjwLBPewDBpH509V3wL5PCYRJXrsxdX2GF7097hEgg7NjuuEyznXN16abqtbxNlgXkEBMARCfAiA+BUB8CoD4FADxCPgBCJTKzmMp8VwAAAAASUVORK5CYII=" SearchSteps="FuzzySelector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="10bc020380bfae4f8ddf046a1c3a7db2.png" xmlns="">03_EfP4WbE0i9kEFIQxiLag</imageRef>
+    </TargetAnchorable>
+    <scg:List x:TypeArguments="ObjectRepositoryVariableData" x:Key="Variables" Capacity="1">
+      <ObjectRepositoryVariableData Name="BrowserAppName" />
+    </scg:List>
+    <x:String x:Key="ActivityType">GetText</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

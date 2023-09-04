@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="aQFaE88kC0e3U1uS0VsWHw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://www.recaptcha.net/recaptcha/enterprise/bframe?hl=en&amp;v=4q6CtudrwcI-LSEYlfoEbDXg&amp;k=6LebmqcZAAAAAG6-ZXJaA9MjDqV0erfPGduLV7NI" DesignTimeRectangle="951, 263, 36, 36" DesignTimeScaleFactor="1" FriendlyName="'A'" FullSelectorArgument="&lt;webctrl tag='IFRAME' uipath-html-title='recaptcha challenge*' /&gt;&lt;webctrl tag='A' aaname='Alternatively, download audio as MP3' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='IFRAME' uipath-html-title='recaptcha challenge*' /&gt;&lt;webctrl tag='A' aaname='Alternatively, download audio as MP3' type='' class='rc-audiochallenge-tdownload-link' /&gt;" Guid="2053630b-19f5-4d4e-add1-3bcb0aed795e" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADCSURBVFhH7dPRDQIhEEVRe6YXeqEXWqAG9PpFDBKYN+rGzE3mj2VPduHWL14A1QKo9t/AWmsvpSyHNUoSEEBKaTmsUQpgAFcF8FEAvwJsrT1f9Do55ylqHNbMnmXPnba/IJvOAJZhr92OfrEH8gRHx2dQQZ7iyHRJLEgLjkxAOkFacWQG0g5SwZEEpBVSxZEMpBnSA0cuQBqRXjhyAxIwTxy5Aj9RANW2gOMF8JrdsxrAd+MK/GUBVAugWgDVLg7s/Q7COEc2gFTrwQAAAABJRU5ErkJggg==" ScopeSelectorArgument="[string.Format(&quot;&lt;html app='{0}' title='*' /&gt;&quot;, BrowserAppName)]" SearchSteps="Selector" Version="V2" Visibility="Visible" WaitForReadyArgument="Complete">
+      <imageRef attrName="InformativeScreenshot" originalValue="60834d250412f8cdfed1a43ffce8d995.png" xmlns="">0gZfTkidCTU-QjYjms3lopA</imageRef>
+    </TargetAnchorable>
+    <scg:List x:TypeArguments="ObjectRepositoryVariableData" x:Key="Variables" Capacity="1">
+      <ObjectRepositoryVariableData IsVariable="False" Name="BrowserAppName" />
+    </scg:List>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

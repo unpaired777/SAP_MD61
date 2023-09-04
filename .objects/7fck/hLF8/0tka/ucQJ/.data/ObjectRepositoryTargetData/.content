@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="wFycwN8PvEq52Et8-l3D2w" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://my305028.s4hana.ondemand.com/ui#SalesOrder-manageSalesOrderV2?preferredMode=create&amp;sap-app-origin-hint=&amp;/SalesOrderManage('')?i-action=create&amp;sap-iapp-state=AS7TVKUWQCMZFZMOD5LT0WN18HSQT41MST1JDTDC" DesignTimeRectangle="188, 628, 136, 24" DesignTimeScaleFactor="1" FriendlyName="'MZ-FG-R300'" FullSelectorArgument="[string.Format(&quot;&lt;webctrl colName='Product' innertext='{0}' tag='DIV' /&gt;&quot;, str_Product)]" FuzzySelectorArgument="&lt;webctrl id='cus.sd.salesorderv2.manage::SalesOrderManageObjectPage--fe::table::_Item::LineItem::TableValueHelp::_Item::Product::SuggestTable' /&gt;&lt;webctrl colName='Product' innertext='MZ-FG-R300' tag='DIV' type='' class='' aaname='' check:text='MZ-FG-R300' /&gt;" Guid="fe644cc2-2efd-426b-b404-04b1f81876b4" ImageBase64="" ScopeSelectorArgument="[string.Format(&quot;&lt;html app='{0}' title='*' /&gt;&quot;, BrowserAppName)]" SearchSteps="Selector" Version="V2" Visibility="Interactive" WaitForReadyArgument="Complete">
+      <imageRef attrName="InformativeScreenshot" originalValue="23d2d4b4028719b2c078d24759685926.png" xmlns="">23d2d4b4028719b2c078d24759685926.png</imageRef>
+    </TargetAnchorable>
+    <scg:List x:TypeArguments="ObjectRepositoryVariableData" x:Key="Variables" Capacity="2">
+      <ObjectRepositoryVariableData Name="BrowserAppName" />
+      <ObjectRepositoryVariableData Name="str_Product" />
+    </scg:List>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

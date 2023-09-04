@@ -1,0 +1,14 @@
+﻿{
+  "Id": "amZF1PoiDkyt2Kl34aITuw",
+  "Reference": "hz4LrFmUMEiEUgYjo26OTg/amZF1PoiDkyt2Kl34aITuw",
+  "ParentRef": "hz4LrFmUMEiEUgYjo26OTg/hLF8mut8-0ivvVw9XIYjhg",
+  "Name": "Login Screen",
+  "Type": "Screen",
+  "TaxonomyType": "Screen",
+  "Created": "2023-04-18T04:23:49.6886519Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=23.4.1.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=23.4.1.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2023-04-18T04:23:49.6886519Z"
+}

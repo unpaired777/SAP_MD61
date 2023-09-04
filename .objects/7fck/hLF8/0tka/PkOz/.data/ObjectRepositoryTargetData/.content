@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="WzDzNx5Uh0CTRreU9fDr-A" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://my305028.s4hana.ondemand.com/ui#SalesOrder-manageSalesOrderV2?preferredMode=create&amp;/SalesOrderManage(...)?i-action=create" CvTextArgument="00" CvType="Text" DesignTimeRectangle="840, 767, 136, 24" DesignTimeScaleFactor="1" FriendlyName="'00'" FullSelectorArgument="[string.Format(&quot;&lt;webctrl colName='Division' innertext='{0}' tag='DIV' /&gt;&quot;, str_Division)]" FuzzySelectorArgument="&lt;webctrl colName='Division' innertext='00' tag='DIV' type='' class='' aaname='' check:text='00' /&gt;" Guid="9303cd65-8b8a-4f7b-bf43-64d8a24ac1ed" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAIwAAAAcCAYAAACzpld9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHzSURBVGhD7djLS5RRHMZx/x43LgPb66KNLkRoYSiBt5Qa1Jw0ccIQR6JUJMsLghShiwHzAqULBV1oaI5aRokZo2bj6IyOqOPMPHlOx5Ou5Lf1fT7L84N39eU9lxQQCTAYEmEwJMJgSITBkAiDIREGQyIMhkQYDIlcCmYvHIG35TXSbt5CekYO+t75cHISM1Ngc2sbFbWNSL2RiczsOxj9OIFEImGm5AQ2mNN4XMfiaWpFYGML31d/Ir+kCm8HBpFMJnFwEIXr0VO87H6D4E4In+YXkXW7CJNTM+YL5AQ2mLX1AO6WVeNXYNOsAJ/9X1BW5cH+WSxzC0sodj1GOLJvptB/mCfeNsRi//9CdL3ZYGbn/HjgbkA0emhWgN/bQRTer8Hq2jp8Qx/Q9OIV4he2oK/ffuj57l7ErNB1Z4N5PzoOt6cZR8fHZgU6hHuV9TqY9s4+tHT0msk/al3NGYxzMBgS4ZZEIjYYdTNSh14VxzkVUYmrTh96/csrZ3M3QrthM4WOiIdeZ7HBqD+H2naq6732Wl1Q+hCDI2N6rrYqtWU9b++x1+rc/HIdFTmHDUZR29Gzti79cKce5vp9w/p95tyfYEgHpR7ucvJKMT4xrd9oyDkuBUN0FQZDIgyGRBgMiTAYEmEwJMJgSITBkAiDIQHgL7Zim+68HbomAAAAAElFTkSuQmCC" ScopeSelectorArgument="[string.Format(&quot;&lt;html app='{0}' title='*' /&gt;&quot;, BrowserAppName)]" SearchSteps="Selector" Version="V2" Visibility="Interactive" WaitForReadyArgument="Complete">
+      <imageRef attrName="InformativeScreenshot" originalValue="23c908c90fb43d4f600879330010028e.png" xmlns="">0rsZzeC11AEe6J-W8HulDMg</imageRef>
+    </TargetAnchorable>
+    <scg:List x:TypeArguments="ObjectRepositoryVariableData" x:Key="Variables" Capacity="2">
+      <ObjectRepositoryVariableData Name="BrowserAppName" />
+      <ObjectRepositoryVariableData Name="str_Division" />
+    </scg:List>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

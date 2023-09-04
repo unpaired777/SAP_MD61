@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="8pBG9CX2_EyTIjz9RapFZg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://my305028.s4hana.ondemand.com/ui#SalesOrder-manageSalesOrderV2?preferredMode=create&amp;/SalesOrderManage(...)?i-action=create" CvTextArgument="10" CvType="Text" DesignTimeRectangle="840, 719, 136, 24" DesignTimeScaleFactor="1" FriendlyName="'10'" FullSelectorArgument="[string.Format(&quot;&lt;webctrl colName='Distribution Channel' innertext='{0}' tag='DIV' /&gt;&quot;, str_DistributionChannel)]" FuzzySelectorArgument="&lt;webctrl colName='Distribution Channel' innertext='10' tag='DIV' type='' class='' aaname='' check:text='10' /&gt;" Guid="e5e597c6-8afa-4eec-b71d-d76f90b25404" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAIwAAAAcCAYAAACzpld9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGoSURBVGhD7djdK0NxHMdx/4l7uXel3M2lh6QkWslDHtOUx4yScIEkJFLihiIpRRThAk2GUCR5WB4OG8qabR/O2c+yNrXvrfN51e9i33Pa1bvz+52TACIBBkMiDIZEGAyJMBgSYTAkwmBIhMGQCIMhkahgrq5vUVzdhIa2Hnx4vWoacue6h625E0kpFlgyC7G0so5AIKCukhlEBLO8toms/DKU21qjgnl7e0dtYweGxqbw+KRhb/8QGXml2NjaUXeQGUQEMzu/hJtbF+YWl6OCcRwcoay2BW7Pq5rAeMK0dw/A5/OpCf13Mc8wsYLRZ119I/D/2oJOzs5RUtOE5xePmtB/F3cwg6OT6B+eUL9CLi6vUFFnZzAmwmBIhFsSicQdjPP4FEWVDdCe3WoSuo+HXnMJBxMMBvH6/eqsPy2mZxaM7y2u+wfjrejT7zfi0SPqHRwPv1bnWquw63CqfyAzCAfzE0RicmrESs+2GmcV3cOjhnp7t/HhLqegHKvr20ZoZB4xtySivzAYEmEwJMJgSITBkAiDIREGQyIMhkQS0oo1cHHFtzR8AYk84OoD9JkoAAAAAElFTkSuQmCC" ScopeSelectorArgument="[string.Format(&quot;&lt;html app='{0}' title='*' /&gt;&quot;, BrowserAppName)]" SearchSteps="Selector" Version="V2" Visibility="Interactive" WaitForReadyArgument="Complete">
+      <imageRef attrName="InformativeScreenshot" originalValue="4d87fea774ffe17b6cddef062cd4b8e1.png" xmlns="">051MBU5NY_U63XceNUB5mrg</imageRef>
+    </TargetAnchorable>
+    <scg:List x:TypeArguments="ObjectRepositoryVariableData" x:Key="Variables" Capacity="2">
+      <ObjectRepositoryVariableData Name="BrowserAppName" />
+      <ObjectRepositoryVariableData Name="str_DistributionChannel" />
+    </scg:List>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

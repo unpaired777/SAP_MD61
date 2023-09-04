@@ -1,0 +1,14 @@
+﻿{
+  "Id": "-Nxr7XIOpk2vV0QHOwdHDQ",
+  "Reference": "hz4LrFmUMEiEUgYjo26OTg/-Nxr7XIOpk2vV0QHOwdHDQ",
+  "ParentRef": "hz4LrFmUMEiEUgYjo26OTg/50RSEXwB40WbthP490lC-A",
+  "Name": "Download Logo",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Created": "2023-04-26T13:36:00.7392929Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=23.4.1.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=23.4.1.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2023-04-26T13:36:00.7392929Z"
+}

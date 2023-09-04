@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="k9AIjbyOU0-HHtRfwKwNaQ" Reference="OVwlqfWTEEKHxUpO3LrkCQ/32cUOUKOR06X95VEyRG4KQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://my305028.s4hana.ondemand.com/ui?sap-language=EN&amp;help-mixedLanguages=false#SalesOrder-manageSalesOrderV2?preferredMode=create&amp;sap-app-origin-hint=&amp;/SalesOrderManage('180738')?sap-iapp-state=AS4NCROBFK9GWPS7PT85AOVAGKQ1992L5G86B2GT" DesignTimeRectangle="1188, 741, 64, 32" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Click 'Close''" FullSelectorArgument="&lt;webctrl aaname='Close' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Close' tag='BUTTON' type='' class='sapMBtnBase sapMBtn sapMDialogEndButton sapMBarChild' check:text='Close' /&gt;" Guid="1b9b7453-963a-427a-9f2d-ff69c4d90102" ScopeSelectorArgument="[string.Format(&quot;&lt;html app='{0}' title='*' /&gt;&quot;, BrowserAppName)]" SearchSteps="Selector" Version="V2" Visibility="Interactive" WaitForReadyArgument="Complete">
+      <imageRef attrName="InformativeScreenshot" originalValue="d2f4f6f6b4adb19fc0e569205561a783.png" xmlns="">d2f4f6f6b4adb19fc0e569205561a783.png</imageRef>
+    </TargetAnchorable>
+    <scg:List x:TypeArguments="ObjectRepositoryVariableData" x:Key="Variables" Capacity="1">
+      <ObjectRepositoryVariableData Name="BrowserAppName" />
+    </scg:List>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

@@ -1,0 +1,14 @@
+﻿{
+  "Id": "WJZpJWQruU651fu0ofpiIQ",
+  "Reference": "hz4LrFmUMEiEUgYjo26OTg/WJZpJWQruU651fu0ofpiIQ",
+  "ParentRef": "hz4LrFmUMEiEUgYjo26OTg/0tkah7Xzfky_pDTpdxiRqQ",
+  "Name": "Sales Organization",
+  "Type": "Element",
+  "TaxonomyType": "Input",
+  "Created": "2023-04-26T13:45:02.097396Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=23.4.1.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=23.4.1.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2023-04-26T13:45:02.097396Z"
+}

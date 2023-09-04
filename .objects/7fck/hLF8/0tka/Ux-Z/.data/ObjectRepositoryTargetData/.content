@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="QT4iw19wF0SqwieGfJXoDQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://my305028.s4hana.ondemand.com/ui#SalesOrder-manageSalesOrderV2?preferredMode=create&amp;sap-app-origin-hint=&amp;/SalesOrderManage('')?i-action=create&amp;sap-iapp-state=AS5NDELJAMLF8SMYA54GE7Q97NJORSMH0A9NXAU7" DesignTimeRectangle="1053, 578, 214, 32" DesignTimeScaleFactor="1" FriendlyName="'Click 'Item Category''" FullSelectorArgument="[string.Format(&quot;&lt;webctrl ui5-colLabel='Item Category' ui5-type='Input' tableRow='{0}' tag='DIV' /&gt;&lt;webctrl ui5-colLabel='Item Category' ui5-type='Input' /&gt;&quot;, int_Counter)]" FuzzySelectorArgument="&lt;webctrl tag='SPAN' ui5-type='Button' class='*sapMInputBaseIcon' /&gt;" Guid="9b13841c-7469-4675-9225-9aa9a3fea1ff" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACQAAAAdCAYAAADCdc79AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEKSURBVFhH7ZcxCsIwFEC9SS/gFTyHk0vp5CL0BC52cXD1BHHpJaSbVwgIXVyrok6Fb2P6QWNC09aYj/jgTSX08fuh7QCIQS+oOJ3Bh8fKy/UGZVnWKRJvQagIe47yHiQUk0JIBIkpISSChMjvBXEWQzAcGQ1Zrj2nivQLylbaCNVlpjmriPQKktOJgXH99YKnEFZBNlNC+k1I3DBKgeuuCb8e1KTroKYFDpLd6xmnQV0W2GVQpwWmFLRNDFMziDgKyoFFdZC6VwYRt4+shcg/yCRiHfTJ95ZOxD6oUk5JH/LQcoF1Iq2CXIqQCCL3CUvqI//tN2g8nYMPJ7MFLNcb2OeHOkVC7Fca4A7PfLdEuM63QAAAAABJRU5ErkJggg==" ScopeSelectorArgument="[string.Format(&quot;&lt;html app='{0}' title='*' /&gt;&quot;, BrowserAppName)]" SearchSteps="Selector" Version="V2" Visibility="Interactive" WaitForReadyArgument="Complete">
+      <imageRef attrName="InformativeScreenshot" originalValue="345be157df75d80075d7310008bfa76a.png" xmlns="">345be157df75d80075d7310008bfa76a.png</imageRef>
+    </TargetAnchorable>
+    <scg:List x:TypeArguments="ObjectRepositoryVariableData" x:Key="Variables" Capacity="2">
+      <ObjectRepositoryVariableData Name="BrowserAppName" />
+      <ObjectRepositoryVariableData IsString="False" Name="int_Counter" />
+    </scg:List>
+    <x:String x:Key="ActivityType">TypeInto</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

@@ -1,0 +1,14 @@
+﻿{
+  "Id": "WLy6kH6-UUyAmGbuSqEFQA",
+  "Reference": "hz4LrFmUMEiEUgYjo26OTg/WLy6kH6-UUyAmGbuSqEFQA",
+  "ParentRef": "hz4LrFmUMEiEUgYjo26OTg/Wz2r8Pg0K0qfJTtrVbhjXQ",
+  "Name": "Sign Out",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Created": "2023-04-25T06:38:29.6915006Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=23.4.1.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=23.4.1.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2023-04-25T06:38:29.6915006Z"
+}

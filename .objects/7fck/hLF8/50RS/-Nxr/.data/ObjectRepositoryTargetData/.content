@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="KbAQ6MddR0SyLegvLZw4Tw" Reference="hz4LrFmUMEiEUgYjo26OTg/-Nxr7XIOpk2vV0QHOwdHDQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://www.google.com/recaptcha/api2/bframe?hl=en&amp;v=vkGiR-M4noX1963Xi_DB0JeI&amp;k=6Le-wvkSAAAAAPBMRTvw0Q4Muexq9bi0DJwx_mJ-" ContentHash="oAuS1WPWGEiJ1OT9bzJS-Q" CvType="Icon" DesignTimeRectangle="215, 535, 36, 36" DesignTimeScaleFactor="1" FriendlyName="'A'" FullSelectorArgument="&lt;webctrl name='c*' tag='IFRAME' /&gt;&lt;webctrl tag='A' aaname='Alternatively, download audio as*' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='IFRAME' /&gt;&lt;webctrl tag='A' class='rc-audiochallenge-tdownload-link' aaname='Alternatively, download audio as MP3' /&gt;" Guid="5ee29016-c984-4bf7-8bde-aef82a9f80a9" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADCSURBVFhH7dPRDQIhEEVRe6YXeqEXWqAG9PpFDBKYN+rGzE3mj2VPduHWL14A1QKo9t/AWmsvpSyHNUoSEEBKaTmsUQpgAFcF8FEAvwJsrT1f9Do55ylqHNbMnmXPnba/IJvOAJZhr92OfrEH8gRHx2dQQZ7iyHRJLEgLjkxAOkFacWQG0g5SwZEEpBVSxZEMpBnSA0cuQBqRXjhyAxIwTxy5Aj9RANW2gOMF8JrdsxrAd+MK/GUBVAugWgDVLg7s/Q7COEc2gFTrwQAAAABJRU5ErkJggg==" Reference="hz4LrFmUMEiEUgYjo26OTg/-Nxr7XIOpk2vV0QHOwdHDQ" ScopeSelectorArgument="[string.Format(&quot;&lt;html app='{0}' title='*' /&gt;&quot;, BrowserAppName)]" SearchSteps="Selector" Version="V2" Visibility="Interactive" WaitForReadyArgument="Complete">
+      <imageRef attrName="InformativeScreenshot" originalValue="15c91ccabfd858f61d60e95f4cc98783.png" xmlns="">15c91ccabfd858f61d60e95f4cc98783.png</imageRef>
+    </TargetAnchorable>
+    <scg:List x:TypeArguments="ObjectRepositoryVariableData" x:Key="Variables" Capacity="1">
+      <ObjectRepositoryVariableData IsVariable="False" Name="BrowserAppName" />
+    </scg:List>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>
